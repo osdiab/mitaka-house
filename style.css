@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    font-family: Lato;
+}
+
+header {
+    width: 100%;
+    margin: 2rem 0;
+    margin: 2em 0;
+    margin-bottom: 1rem;
+    margin-bottom: 1em;
+}
+
+#hdr-stripe {
+    width: 100%;
+    background-color: #FF6D00;
+    padding: 1rem;
+    padding: 1em;
+}
+
+#page-wrapper {
+    width: 100%;
+    vertical-align: top;
+}
+
+#page-sidebar {
+    float: left;
+    padding: 0 1.5rem;
+    padding: 0 1.5em;
+}
+
+#page-content {
+    float: center;
+    padding: 1rem;
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 50rem;
+    width: 50em;
+
+    font-size: 125%;
+    line-height: 1.5em;
+}
+
+/**
+ * Clearfix, credit to http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ */
+.cf {
+    *zoom: 1;
+}
