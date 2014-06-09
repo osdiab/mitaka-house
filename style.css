@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  color: #333;
   background: #fafafa;
   font-family: Lato, Helvetica, Arial;
 }
@@ -19,6 +20,10 @@ header {
   margin: 2em 0;
   margin-bottom: 1rem;
   margin-bottom: 1em;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5em;
 }
 
 h1 {
@@ -66,10 +71,15 @@ article {
   background: #f9f9f9;
   border: 1px #ebebeb solid;
   display: block;
-  padding: 1rem;
-  padding: 1em;
+  padding: 1rem 2rem;
+  padding: 1em 2em;
   margin: 1rem;
   margin: 1em;
+}
+
+.datestamp {
+  font-style: italic;
+  color: #555;
 }
 
 #external-links {
