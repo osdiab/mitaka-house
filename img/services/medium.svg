@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 200 200"><path fill="#fff" d="M.001 0v200h200v-200h-200zm148.912 72.752h-3.869c-1.437 0-3.095 1.879-3.095 3.206v48.081c0 1.328 1.658 3.316 3.095 3.316h3.869v11.164h-34.708v-11.164h6.964v-50.513h-.332l-17.133 61.677h-13.265l-16.911-61.677h-.332v50.513h7.295v11.164h-29.402v-11.164h3.758c1.548 0 3.206-1.988 3.206-3.316v-48.081c0-1.327-1.658-3.206-3.206-3.206h-3.758v-11.606h36.697l12.048 44.877h.332l12.16-44.877h36.587v11.606z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="216px" height="216px" viewBox="36.001 0 216 216" enable-background="new 36.001 0 216 216" xml:space="preserve">
+<path fill="#FFFFFF" d="M49.751,13.75v188.5h188.5V13.75H49.751z M190.101,82.319h-3.646c-1.354,0-2.917,1.771-2.917,3.021v45.316
+	c0,1.252,1.562,3.125,2.917,3.125h3.646v10.523h-32.712v-10.523h6.563V86.173h-0.313l-16.147,58.131h-12.502L119.05,86.173h-0.313
+	v47.608h6.875v10.523H97.902v-10.523h3.542c1.459,0,3.021-1.873,3.021-3.125V85.34c0-1.25-1.562-3.021-3.021-3.021h-3.542V71.38
+	h34.586l11.355,42.297h0.312l11.462-42.297h34.482V82.319L190.101,82.319z"/>
+</svg>
