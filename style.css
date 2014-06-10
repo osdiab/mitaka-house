@@ -12,7 +12,7 @@ html, body {
   color: #333;
   background: #fafafa;
   font-family: Lato, Helvetica, Arial;
-  min-width: 50rem;
+  min-width: 40rem;
 }
 
 header {
@@ -36,6 +36,8 @@ h2 {
 }
 
 #hdr-logo {
+  height: 6rem;
+  height: 6em;
   -webkit-transition: .75s ease-in-out;
   -moz-transition: .75s ease-in-out;
   -o-transition: .75s ease-in-out;
@@ -51,6 +53,8 @@ h2 {
 }
 
 #hdr-logo-rest {
+  height: 6rem;
+  height: 6em;
   padding-left: .6rem;
   padding-left: .6em;
 }
@@ -73,6 +77,13 @@ h2 {
   padding: 0 2em;
   display: block;
   max-width: 20%;
+}
+
+#sidebar-logo-rest {
+  width: 6rem;
+  width: 6em;
+  padding-bottom: 2rem;
+  padding-bottom: 2em;
 }
 
 #page-content {
@@ -104,20 +115,26 @@ article {
 }
 
 #external-links {
+  border-top: 4px solid #FFD3B3;
   text-align: center;
+  width: 6rem;
+  width: 6em;
+  padding-top: 2rem;
+  padding-top: 2em;
 }
 
 .service-link {
   text-align: center;
-  display: inline-block;
-  width: 6rem;
-  width: 6em;
+  float: center;
+  display: block;
   height: 6rem;
   height: 6em;
   cursor: pointer;
   cursor: hand;
-  padding: 1rem;
-  padding: 1em;
+  padding: 0 .5rem;
+  padding: 0 .5em;
+  padding-bottom: 1rem;
+  padding-bottom: 1em;
 }
 
 .service-link path {
