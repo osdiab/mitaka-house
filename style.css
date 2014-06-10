@@ -12,6 +12,7 @@ html, body {
   color: #333;
   background: #fafafa;
   font-family: Lato, Helvetica, Arial;
+  min-width: 50rem;
 }
 
 header {
@@ -34,6 +35,26 @@ h2 {
   font-size: 120%;
 }
 
+#hdr-logo {
+  -webkit-transition: .75s ease-in-out;
+  -moz-transition: .75s ease-in-out;
+  -o-transition: .75s ease-in-out;
+  transition: .75s ease-in-out;
+}
+
+#hdr-logo:hover {
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  transform: rotate(720deg);
+}
+
+#hdr-logo-rest {
+  padding-left: .6rem;
+  padding-left: .6em;
+}
+
 #hdr-stripe {
   width: 100%;
   background-color: #FF6D00;
@@ -48,8 +69,8 @@ h2 {
 
 #page-sidebar {
   float: left;
-  padding: 0 2.5rem;
-  padding: 0 2.5em;
+  padding: 0 2rem;
+  padding: 0 2em;
   display: block;
   max-width: 20%;
 }
