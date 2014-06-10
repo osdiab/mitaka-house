@@ -131,8 +131,8 @@ article {
   height: 6em;
   cursor: pointer;
   cursor: hand;
-  padding: 0 .5rem;
-  padding: 0 .5em;
+  padding: 0 1rem;
+  padding: 0 1em;
   padding-bottom: 1rem;
   padding-bottom: 1em;
 }
