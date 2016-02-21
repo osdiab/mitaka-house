@@ -92,8 +92,8 @@ h2 {
 #external-links {
   display: inline-block;
   text-align: center;
-  padding: 2rem;
-  padding: 2em;
+  padding-top: 2rem;
+  padding-top: 2em;
   width: 100%;
 }
 
