@@ -3,7 +3,7 @@
     var SERVICES = [
         ['github', 'https://github.com/osdiab'],
         ['linkedin', 'http://www.linkedin.com/in/osdiab'],
-        ['soundcloud', 'https://soundcloud.com/yellowfive'],
+        ['soundcloud', 'https://soundcloud.com/osdiab'],
         ['medium', 'https://medium.com/@therealomardiab'],
         ['facebook', 'https://www.facebook.com/omar.s.diab'],
         ['twitter', 'https://twitter.com/therealomardiab'],
