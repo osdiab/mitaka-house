@@ -12,7 +12,7 @@ html, body {
   color: #333;
   background: #fafafa;
   font-family: Lato, Helvetica, Arial;
-  min-width: 40rem;
+  min-width: 40em;
 }
 
 header {
@@ -61,7 +61,7 @@ h2 {
 
 #hdr-stripe {
   width: 100%;
-  background-color: #FF8232;
+  background-color: #FF6D00;
   padding: 1rem 2rem;
   padding: 1em 2em;
 }
@@ -69,14 +69,17 @@ h2 {
 #page-wrapper {
   width: 100%;
   vertical-align: top;
+  overflow: hidden;
 }
 
 #page-sidebar {
   float: left;
   padding: 0 2rem;
   padding: 0 2em;
-  display: block;
-  max-width: 20%;
+}
+
+#page-main {
+  overflow: hidden;
 }
 
 #sidebar-logo-rest {
@@ -86,49 +89,22 @@ h2 {
   padding-bottom: 2em;
 }
 
-#page-content {
-  overflow: hidden;
-  padding: 1rem;
-  padding: 1em;
-  margin: 0 auto;
-  max-width: 80%;
-  width: 50rem;
-  width: 50em;
-
-  font-size: 125%;
-  line-height: 1.5em;
-}
-
-article {
-  background: #f9f9f9;
-  border: 1px #ebebeb solid;
-  display: block;
-  padding: 1rem 2rem;
-  padding: 1em 2em;
-  margin: 1rem;
-  margin: 1em;
-}
-
-.datestamp {
-  font-style: italic;
-  color: #555;
-}
-
 #external-links {
-  border-top: 4px solid #FFD3B3;
+  display: inline-block;
   text-align: center;
-  width: 6rem;
-  width: 6em;
-  padding-top: 2rem;
-  padding-top: 2em;
+  padding: 2rem;
+  padding: 2em;
+  width: 100%;
 }
 
 .service-link {
   text-align: center;
   float: center;
-  display: block;
-  height: 6rem;
-  height: 6em;
+  display: inline-block;
+  width: 10rem;
+  width: 10em;
+  height: 10rem;
+  height: 10em;
   cursor: pointer;
   cursor: hand;
   padding: 0 1rem;
