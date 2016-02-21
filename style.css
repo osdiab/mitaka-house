@@ -93,8 +93,7 @@ h2 {
   display: inline-block;
   text-align: center;
   max-width: 90%;
-  padding: 3em 1em;
-  padding-bottom: 0;
+  padding: 1.5em;
   background: #EEE;
   border-radius: 1em;
 }
@@ -111,8 +110,6 @@ h2 {
   cursor: hand;
   padding: 0 1rem;
   padding: 0 1em;
-  padding-bottom: 1rem;
-  padding-bottom: 1em;
 }
 
 .service-link path {
