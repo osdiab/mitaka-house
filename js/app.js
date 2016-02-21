@@ -7,7 +7,7 @@
         ['medium', 'https://medium.com/@therealomardiab'],
         ['facebook', 'https://www.facebook.com/omar.s.diab'],
         ['twitter', 'https://twitter.com/therealomardiab'],
-        ['email', 'mailto:o.s.diab@gmail.com']];
+        ['email', 'mailto:me@omardiab.com']];
 
     var generateService = function(servicesRoot, name, url) {
         var serviceFileRoot = [servicesRoot, name].join('/');
