@@ -1,0 +1,135 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #fafafa;
+  font-family: Lato, Helvetica, Arial;
+}
+
+#page-body {
+  display: flex;
+}
+
+header {
+  width: 100%;
+  margin: 2rem 0;
+  margin-bottom: 1rem;
+  background-color: #FF6D00;
+  padding: 1rem 2rem;
+}
+
+
+#page-sidebar {
+  flex-basis: 6rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0 2rem;
+}
+
+#page-main {
+  flex-grow: 1;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5em;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 120%;
+}
+
+#hdr-logo {
+  height: 6rem;
+  -webkit-transition: .75s ease-in-out;
+  -moz-transition: .75s ease-in-out;
+  -o-transition: .75s ease-in-out;
+  transition: .75s ease-in-out;
+}
+
+#hdr-logo:hover {
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+  -ms-transform: rotate(720deg);
+  transform: rotate(720deg);
+}
+
+#hdr-logo-rest {
+  height: 6rem;
+  padding-left: .6rem;
+}
+
+#page-wrapper {
+  width: 100%;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+#page-sidebar > *:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+#page-sidebar > * + *:before {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #FF9D66;
+  content: " ";
+}
+
+#page-sidebar > *:not(:first-child) {
+  margin-top: 2rem;
+}
+
+#sidebar-logo-rest {
+  display: block;
+  width: 6rem;
+}
+
+#external-links {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+#external-links > .service-link {
+  margin-top: 2rem;
+}
+
+.service-link {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.service-link > svg {
+  width: 100%;
+}
+
+.service-link path {
+  fill: #FF6D00;
+  stroke: #FF6D00;
+
+  transition: stroke .25s ease;
+  transition: fill .25s ease;
+}
+
+.service-link:hover path, .service-link:focus path {
+  fill: #FF9D66;
+  stroke: #FF9D66;
+}
