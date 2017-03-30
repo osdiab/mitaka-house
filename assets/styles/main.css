@@ -1,4 +1,4 @@
-*, *:before, *:after {
+*, *::before, *::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -12,26 +12,42 @@ html, body {
   color: #333;
   background: #fafafa;
   font-family: Lato, Helvetica, Arial;
-}
-
-#page-body {
   display: flex;
+  flex-direction: column;
 }
 
 header {
   width: 100%;
-  margin: 2rem 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   background-color: #FF6D00;
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
+  margin-bottom: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
+#page-body {
+  display: flex;
+  flex-grow: 1;
+}
+
+body::before {
+  content: " ";
+  background: #5BC0EB;
+  width: 10rem;
+  height: 2rem;
+  display: block;
+  margin-left: 2rem;
+}
 
 #page-sidebar {
   flex-basis: 6rem;
   flex-grow: 0;
   flex-shrink: 0;
   padding: 0 2rem;
+  padding-top: 1rem;
+  background: #5BC0EB;
+  margin: 0 2rem;
 }
 
 #page-main {
@@ -52,17 +68,10 @@ h2 {
 
 #hdr-logo {
   height: 6rem;
-  -webkit-transition: .75s ease-in-out;
-  -moz-transition: .75s ease-in-out;
-  -o-transition: .75s ease-in-out;
   transition: .75s ease-in-out;
 }
 
 #hdr-logo:hover {
-  -webkit-transform: rotate(720deg);
-  -moz-transform: rotate(720deg);
-  -o-transform: rotate(720deg);
-  -ms-transform: rotate(720deg);
   transform: rotate(720deg);
 }
 
@@ -71,26 +80,24 @@ h2 {
   padding-left: .6rem;
 }
 
+#hdr-logo *, #hdr-logo-rest *, #sidebar-logo-rest * {
+  fill: #FFF;
+  stroke: #FFF;
+}
+
 #page-wrapper {
   width: 100%;
   vertical-align: top;
   overflow: hidden;
 }
 
-#page-sidebar > *:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-#page-sidebar > * + *:before {
+#page-sidebar > * + *::before {
   display: block;
   width: 100%;
   height: 1px;
-  background: #FF9D66;
+  background: #FFF;
+  margin: 2rem 0;
   content: " ";
-}
-
-#page-sidebar > *:not(:first-child) {
-  margin-top: 2rem;
 }
 
 #sidebar-logo-rest {
@@ -102,34 +109,32 @@ h2 {
   display: block;
   text-align: center;
   width: 100%;
-}
-
-#external-links > .service-link {
-  margin-top: 2rem;
+  list-style-type: none;
+  padding: 0;
 }
 
 .service-link {
+  margin: 2rem 0;
   display: block;
   width: 100%;
-  height: 0;
-  padding-bottom: 100%;
+  padding: .5rem;
   cursor: pointer;
   cursor: hand;
 }
 
-.service-link > svg {
+.service-link svg {
   width: 100%;
 }
 
-.service-link path {
-  fill: #FF6D00;
-  stroke: #FF6D00;
+.service-link svg * {
+  fill: #FFF;
+  stroke: #FFF;
 
   transition: stroke .25s ease;
   transition: fill .25s ease;
 }
 
-.service-link:hover path, .service-link:focus path {
-  fill: #FF9D66;
-  stroke: #FF9D66;
+.service-link:hover svg *, .service-link:focus svg * {
+  fill: #FDE74C;
+  stroke: #FDE74C;
 }
