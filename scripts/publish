@@ -25,5 +25,5 @@
 
     GIT_DEPLOY_DIR="$(pwd)/__build" \
     GIT_DEPLOY_BRANCH="master" \
-    GIT_DEPLOY_REPO="osdiab.github.io" ./scripts/vendor/git-directory-deploy.sh
+    GIT_DEPLOY_REPO="origin" ./scripts/vendor/git-directory-deploy.sh
 )
