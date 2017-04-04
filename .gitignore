@@ -2,3 +2,4 @@
 
 __build/
 node_modules/
+.vscode/
