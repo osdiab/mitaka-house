@@ -1,0 +1,34 @@
+{
+  "name": "osdiab.github.io",
+  "version": "0.0.1",
+  "description": "Omar Diab's personal website",
+  "repository": "git@github.com:osdiab/osdiab.github.io.git",
+  "author": "Omar Diab <me@omardiab.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open",
+    "publish": "./scripts/publish"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "autoprefixer": "^6.7.7",
+    "awesome-typescript-loader": "^3.1.2",
+    "core-js": "^2.4.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "postcss": "^5.2.16",
+    "postcss-loader": "^1.3.3",
+    "postcss-scss": "^0.4.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "stylelint": "^7.10.1",
+    "stylelint-scss": "^1.4.3",
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
