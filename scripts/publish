@@ -1,17 +1,28 @@
 #!/usr/bin/env bash
 
-# branch="$(git rev-parse --abbrev-ref HEAD)"
-# if [ $branch != "development" ]
-# then
-#     echo "❌ Branch is not development; instead, was '$branch'."
-#     exit -1
-# fi
-# echo "✅ Branch is '$branch'!"
+(
+    cd "$( dirname $( dirname "${BASH_SOURCE[0]}" ) )"
+    git_root = "$(git rev-parse --show-toplevel)"
+    cd $git_root
 
-git diff-index --quiet HEAD --
-if [ $? -eq 1 ]
-then
-    echo "❌ Branch has unstaged or uncommitted changes."
-    exit -1
-fi
-echo "✅ No uncommitted changes!"
+    branch="$(git rev-parse --abbrev-ref HEAD)"
+    if [ $branch != "development" ]
+    then
+        echo "❌ Branch is not development; instead, was '$branch'."
+        exit 1
+    fi
+    echo "✅ Branch is '$branch'!"
+
+    diffWithOrigin=$(git diff --name-only origin/development)
+    if [[ $diffWithOrigin != "" ]]
+    then
+        echo "❌ Local development branch must be in sync with origin/development.";
+        exit 1;
+    fi
+
+    yarn install
+    yarn run build
+    GIT_DEPLOY_DIR="$(pwd)/__build" \
+    GIT_DEPLOY_BRANCH="master" \
+    GIT_DEPLOY_REPO="osdiab.github.io" ./scripts/vendor/git-directory-deploy.sh
+)

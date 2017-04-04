@@ -6,7 +6,7 @@
   "author": "Omar Diab <me@omardiab.com>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "rm -rf __build/ && webpack && cp -r ./dist/* __build/",
     "start": "webpack-dev-server --open",
     "publish": "./scripts/publish"
   },
