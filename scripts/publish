@@ -2,7 +2,7 @@
 
 (
     cd "$( dirname $( dirname "${BASH_SOURCE[0]}" ) )"
-    git_root = "$(git rev-parse --show-toplevel)"
+    git_root="$(git rev-parse --show-toplevel)"
     cd $git_root
 
     branch="$(git rev-parse --abbrev-ref HEAD)"
@@ -22,6 +22,7 @@
 
     yarn install
     yarn run build
+
     GIT_DEPLOY_DIR="$(pwd)/__build" \
     GIT_DEPLOY_BRANCH="master" \
     GIT_DEPLOY_REPO="osdiab.github.io" ./scripts/vendor/git-directory-deploy.sh
