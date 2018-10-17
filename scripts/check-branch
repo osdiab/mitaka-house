@@ -1,22 +1,24 @@
 #!/usr/bin/env bash
 
 (
+    target_branch="development"
+
     cd "$( dirname $( dirname "${BASH_SOURCE[0]}" ) )"
     git_root="$(git rev-parse --show-toplevel)"
     cd $git_root
 
     branch="$(git rev-parse --abbrev-ref HEAD)"
-    if [ $branch != "development" ]
+    if [ $branch != $target_branch ]
     then
-        echo "❌ Branch is not master; instead, was '$branch'."
+        echo "❌ Branch is not $target_branch; instead, was '$branch'."
         exit 1
     fi
     echo "✅ Branch is '$branch'!"
 
-    diffWithOrigin=$(git diff --name-only origin/development)
+    diffWithOrigin=$(git diff --name-only origin/$target_branch)
     if [[ $diffWithOrigin != "" ]]
     then
-        echo "❌ Local master branch must be in sync with origin/master.";
+        echo "❌ Local $target_branch branch must be in sync with origin/$target_branch.";
         exit 1;
     fi
 )
