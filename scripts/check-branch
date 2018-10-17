@@ -21,4 +21,5 @@
         echo "❌ Local $target_branch branch must be in sync with origin/$target_branch.";
         exit 1;
     fi
+    echo "✅ $branch contents matches origin/$target_branch!"
 )
