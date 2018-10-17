@@ -6,9 +6,8 @@
   "author": "Omar Diab <me@omardiab.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf __build/ && webpack && cp -r ./dist/* __build/",
-    "start": "webpack-dev-server --open",
-    "publish": "./scripts/publish"
+    "serve": "http-server ./website",
+    "publish": "./scripts/check-branch && gh-pages --src website/**/*"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
