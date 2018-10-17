@@ -8,7 +8,7 @@
     branch="$(git rev-parse --abbrev-ref HEAD)"
     if [ $branch != "development" ]
     then
-        echo "❌ Branch is not development; instead, was '$branch'."
+        echo "❌ Branch is not master; instead, was '$branch'."
         exit 1
     fi
     echo "✅ Branch is '$branch'!"
@@ -16,14 +16,7 @@
     diffWithOrigin=$(git diff --name-only origin/development)
     if [[ $diffWithOrigin != "" ]]
     then
-        echo "❌ Local development branch must be in sync with origin/development.";
+        echo "❌ Local master branch must be in sync with origin/master.";
         exit 1;
     fi
-
-    yarn install
-    yarn run build
-
-    GIT_DEPLOY_DIR="$(pwd)/__build" \
-    GIT_DEPLOY_BRANCH="master" \
-    GIT_DEPLOY_REPO="origin" ./scripts/vendor/git-directory-deploy.sh
 )
