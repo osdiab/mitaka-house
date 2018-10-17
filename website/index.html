@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700" rel="stylesheet">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-family: 'Source Serif Pro', serif;
+    }
+
+    html,
+    body {
+      background: linear-gradient(to top, midnightblue, darkslateblue);
+    }
+
+    body {
+      padding: 20px 60px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media(max-width: 500px) {
+      body {
+        padding: 20px;
+      }
+    }
+
+    a {
+      color: goldenrod;
+      font-weight: bold;
+    }
+
+    a:hover,
+    a:focus {
+      color: orange;
+    }
+
+    h1 {
+      line-height: 1;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      line-height: 1.5
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    h4 {
+      font-size: 1.75rem;
+    }
+
+    p,
+    ul,
+    ol,
+    label {
+      font-size: 1.2rem;
+    }
+
+    h1:not(:last-child),
+    h2:not(:last-child),
+    h3:not(:last-child),
+    h4:not(:last-child),
+    p:not(:last-child),
+    section:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+
+    .page-section:not(:last-child),
+    header {
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid slategray;
+    }
+
+    body>footer {
+      padding-top: 1.2rem;
+      margin-top: 1.2rem;
+      border-top: 1px solid slategray;
+    }
+
+    .page-section--title {
+      color: goldenrod;
+    }
+
+    .banner--title,
+    .category-title {
+      color: lightcoral;
+    }
+
+    .banner--top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .page-nav {
+      padding-bottom: 20px;
+      border-bottom: 1px solid slategray;
+      margin-bottom: 20px;
+    }
+
+    .page-nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media(min-width: 500px) {
+      .page-nav ul>li {
+        margin-right: 30px;
+      }
+    }
+
+    @media(max-width: 500px) {
+      .page-nav ul {
+        justify-content: space-between;
+      }
+    }
+
+    .omar-diab {
+      color: orange;
+      display: inline-block;
+    }
+
+    .banner--title {
+      margin: 0;
+      flex: 1;
+    }
+
+    .banner--avatar {
+      max-width: 140px;
+      min-height: 140px;
+      flex: 1;
+      align-self: stretch;
+
+      background-image: url(/assets/images/avatar.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      margin-right: 20px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="banner">
+    <section class="banner--top">
+      <span class="banner--avatar"></span>
+      <h1 class="banner--title">
+        I am <span class="omar-diab">Omar Diab.</span>
+      </h1>
+    </section>
+    <nav class="page-nav">
+      <ul>
+        <li><a href="#professional-life">Professional Life</a></li>
+        <li><a href="#passions">Passions</a></li>
+        <li><a href="#contact">Get in touch</a></li>
+      </ul>
+    </nav>
+    <h2 class="banner-subtitle">
+      I create simple tools that enable those around me to realize their goals.
+    </h2>
+  </header>
+  <main>
+    <section id="professional-life" class="page-section">
+      <h2 class="page-section--title">Professional life</h2>
+      <section class="future-life">
+        <h3 class="category-title">Our future, together.</h3>
+        <p>
+          As I am currently engaged in a few passion projects, I am not looking
+          for new work opportunities.
+        </p>
+        <p>
+          If you'd like to keep stay in contact, feel free to
+          <a href="#contact">get in touch</a>.
+        </p>
+      </section>
+      <section class="current-life">
+        <h3 class="category-title">Presently,</h3>
+        <h4>
+          I am co-founding
+          <a class="organization-name" href="https://raha.app">Raha</a>, a
+          non-profit to make the value of a universal basic income tangible today.
+        </h4>
+        <p>
+          There, I designed the structure of our API so that it can be reused in
+          the app, allowing us to release our app within a few months.
+        </p>
+        <p>
+          I also created most of the visual design of the app and website, besides
+          the hand-drawn characters.
+        </p>
+        <h4>
+          I am advising <span class="forboka">Forboka</span>, a nascent
+          food-delivery startup.
+        </h4>
+        <p>
+          I'm guiding their non-technical team to communicate their value
+          proposition clearly, validate their ideas rapidly and produce a
+          functioning application in the absence of a technical team.
+        </p>
+      </section>
+      <section class="past-life">
+        <h3 class="category-title">In retrospect:</h3>
+        <p>
+          At <a class="organization-name" href="https://clever.com">Clever</a>, I
+          implemented
+          <a class="product-name" href="https://clever.com/products/badges">
+            Clever Badges
+          </a>, enabling tech- and language-illiterate PreK-2nd grade students to
+          use life-changing education technology in the classroom
+          <span class="metric">over 50 million times</span>.
+        </p>
+        <p>
+          At Clever, I also played a key role in deciding the company's frontend
+          stack. I lead development on our
+          <a href="https://clever.github.io/components">
+            React component library and design system
+          </a>
+          to make our visual style consistent, and advocated and delivered tools
+          like TypeScript into our workflow.
+        </p>
+      </section>
+    </section>
+    <section id="passions" class="page-section">
+      <h2 class="page-section--title">Passions</h2>
+      <section class="languages">
+        <h3 class="category-title">Languages</h3>
+        <p>
+          I am living in Tokyo, a place I've always admired for its profound
+          culture and superb urban character. I speak beginner-level Japanese.
+          どうぞよろしく、頑張ります！
+        </p>
+        <p>
+          I lived in Shanghai last year, achieving upper-intermediate level
+          Mandarin (HSK4-5). 我很高兴认识你。
+        </p>
+      </section>
+      <section class="cities">
+        <h3 class="category-title">Urban design</h3>
+        <h4>
+          I advocate for housing and transit development in the USA.
+        </h4>
+        <p>
+          Living in San Francisco, attending SF Board of Supervisor hearings,
+          and canvassing for political candidates made it clear: there are
+          structural problems with how the Bay Area (and USA more broadly)
+          decides when and how to build housing and infrastructure.
+        </p>
+      </section>
+      <section class="music">
+        <h3 class="category-title">Electronic Music</h3>
+        <h4>I love DJing house and techno music.</h4>
+        <p>
+          I haven't been active as of late, but my mixes run a broad variety
+          of styles from
+          <a href="https://www.mixcloud.com/osdiab/club-montage/">
+            smooth, soulful vibes
+          </a> to
+          <a href="https://soundcloud.com/osdiab/yellow-five-bob-progressive-1">
+            minimal, tech-house
+          </a> and
+          <a href="https://soundcloud.com/osdiab/2011-10-26-lucid_dreaming?in=osdiab/sets/dj-mixes">
+            euphoric trance
+          </a>. My mixing style tends to be smooth, seamless, harmonic mixes.
+        </p>
+        <p>
+          I've taken a recent interest in mobile DJing, with just a tablet and
+          portable speakers. It's a great deal of fun!
+        </p>
+        <h4>I also produce my own tunes.</h4>
+        <p>
+          It's been a while since I've been active, but I feel good about
+          <a href="https://soundcloud.com/osdiab/work-in-progress-andy-mckee">
+            this remix of Andy McKee
+          </a> and
+          <a href="https://soundcloud.com/osdiab/existentialism">
+            this simple chiptunesey house song
+          </a> I made a while back.
+        </p>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <section id="contact" class="page-section">
+      <h2 class="page-section--title">Get in touch</h2>
+      <p>
+        Feel free to
+        <a href="mailto://hello@omardiab.com">
+          shoot me an email
+        </a> or
+        <a href="https://linkedin.com/in/osdiab">check my LinkedIn</a>.
+      </p>
+    </section>
+  </footer>
+</body>
+
+</html>
