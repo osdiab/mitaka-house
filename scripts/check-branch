@@ -15,7 +15,7 @@
     fi
     echo "✅ Branch is '$branch'!"
 
-    diffWithOrigin=$(git diff --name-only origin/$target_branch)
+    diffWithOrigin=$(git diff --name-only "origin/$target_branch")
     if [[ $diffWithOrigin != "" ]]
     then
         echo "❌ Local $target_branch branch must be in sync with origin/$target_branch.";
