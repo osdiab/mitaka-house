@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "http-server ./website",
-    "deploy": "./scripts/check-branch && gh-pages --src website/**/*"
+    "deploy": "./scripts/check-branch && gh-pages --src website/**/* --branch master"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
