@@ -1,5 +1,4 @@
 import * as React from "react";
-import { RouteComponentProps, RouteProps } from "react-router";
 
 import { GlobalStyle } from "src/presentation/theme/GlobalStyle";
 import styled from "src/presentation/theme/styled-components";
@@ -10,19 +9,12 @@ const PageContainer = styled.div`
   background: linear-gradient(to top, midnightblue, darkslateblue);
 `;
 
-interface IDefaultLayoutProps {
-  Component: RouteProps["component"];
-  matchProps: RouteComponentProps;
-}
-export const DefaultLayout: React.StatelessComponent<IDefaultLayoutProps> = ({
-  Component,
-  matchProps
-}) => {
+export const DefaultLayout: React.StatelessComponent<{}> = ({ children }) => {
   return (
     <PageContainer>
       <GlobalStyle />
       <Header />
-      {Component && <Component {...matchProps} />}
+      {children}
     </PageContainer>
   );
 };
