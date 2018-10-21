@@ -1,6 +1,6 @@
 import styled from "src/presentation/theme/styled-components";
+import { TextBlockStyle } from "src/presentation/utility/mixins/text/TextBlockStyle";
 import { Paragraph } from "src/presentation/utility/Paragraph";
-import { TextBlockStyle } from "./text/TextBlockStyle";
 
 export const H1 = styled.h1`
   font-size: 5rem;
