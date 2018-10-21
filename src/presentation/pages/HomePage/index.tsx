@@ -1,7 +1,10 @@
 import * as React from "react";
+
+import styled from "src/presentation/theme/styled-components";
 import {
   Button,
   ButtonRole,
+  ButtonSize,
   ButtonTargetKind
 } from "src/presentation/utility/Button";
 import { H2 } from "src/presentation/utility/Heading";
@@ -26,6 +29,14 @@ const pageEntries: INavBarProps["entries"] = [
     link: { kind: LinkDestinationKind.INTERNAL, destination: "#contact" }
   }
 ];
+
+const ButtonPane = styled.div`
+  display: flex;
+  align-items: center;
+  > *:not(:last-child) {
+    margin-right: 20px;
+  }
+`;
 export class HomePage extends React.Component<{}> {
   public render() {
     return (
@@ -44,7 +55,7 @@ export class HomePage extends React.Component<{}> {
           >
             Lesson abcdefg
           </Link>
-          <div>
+          <ButtonPane>
             <Button
               onClick={{
                 action: () => {
@@ -67,6 +78,7 @@ export class HomePage extends React.Component<{}> {
               Say sup
             </Button>
             <Button
+              size={ButtonSize.SMALL}
               onClick={{ kind: ButtonTargetKind.SUBMIT, action: undefined }}
               role={ButtonRole.SECONDARY}
             >
@@ -86,6 +98,7 @@ export class HomePage extends React.Component<{}> {
             </Button>
             <Button
               disabled={true}
+              size={ButtonSize.LARGE}
               onClick={{
                 action: () => {
                   alert("hi");
@@ -95,7 +108,7 @@ export class HomePage extends React.Component<{}> {
             >
               Say hi
             </Button>
-          </div>
+          </ButtonPane>
         </PageBody>
       </>
     );
