@@ -1,7 +1,5 @@
 import * as color from "color";
-import isNil from "ramda/es/isNil";
-import pick from "ramda/es/pick";
-import reject from "ramda/es/reject";
+import * as R from "ramda";
 import * as React from "react";
 
 import styled, {
@@ -131,8 +129,8 @@ function getColorParams(
   props: ThemedStyledProps<StyledButtonProps>
 ): ButtonColorParameters {
   return {
-    ...pick(["role", "disabled"], props),
-    palette: { ...pick(["primary", "disabled"], props.theme.palette) }
+    ...R.pick(["role", "disabled"], props),
+    palette: { ...R.pick(["primary", "disabled"], props.theme.palette) }
   };
 }
 
@@ -197,7 +195,7 @@ const defaultProps: OptionalMembers<IButtonProps> = {
 export const Button: React.StatelessComponent<IButtonProps> = props => {
   const { onClick, size, disabled, role, children } = {
     ...defaultProps,
-    ...(reject(isNil, props) as typeof props)
+    ...(R.reject(R.isNil, props) as typeof props)
   } as Required<IButtonProps> & Pick<typeof props, "children">;
 
   switch (onClick.kind) {
