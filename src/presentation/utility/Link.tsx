@@ -1,8 +1,8 @@
 import * as React from "react";
 import {
-  Link as RouterLink,
-  LinkProps as RouterLinkProps
-} from "react-router-dom";
+  HashLink as RouterLink,
+  HashLinkProps as RouterLinkProps
+} from "react-router-hash-link";
 
 import styled from "src/presentation/theme/styled-components";
 import { logger } from "src/utility/logger";
@@ -68,6 +68,7 @@ export const Link: React.StatelessComponent<ILinkProps> = ({
     case LinkDestinationKind.INTERNAL: {
       const props: RouterLinkProps = {
         children,
+        smooth: true,
         to: to.destination
       };
       switch (appearance) {
