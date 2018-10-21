@@ -1,15 +1,15 @@
 import * as React from "react";
 import styled from "src/presentation/theme/styled-components";
 import { H1 } from "src/presentation/utility/Heading";
-import { PageSection } from "src/presentation/utility/PageSection";
+import { PageSection } from "src/presentation/utility/mixins/PageSection";
 
-const HeaderElem = styled(PageSection)`
-  display: flex;
+const HeaderElem = styled.header`
+  ${PageSection} display: flex;
   flex-direction: row;
   align-items: center;
   margin-bottom: 0;
   border: 0;
-`.withComponent("header");
+`;
 const Avatar = styled.span`
   max-width: 140px;
   min-height: 140px;
@@ -30,6 +30,7 @@ const BannerTitle = styled(H1)`
 `;
 const HighlightName = styled.span`
   color: ${props => props.theme.palette.primary};
+  display: inline-block;
 `;
 
 export const Header: React.StatelessComponent<{}> = () => (
