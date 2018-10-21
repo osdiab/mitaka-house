@@ -1,6 +1,6 @@
-import styled from "src/presentation/theme/styled-components";
+import { css } from "src/presentation/theme/styled-components";
 
-export const PageSection = styled.section`
+export const PageSection = css`
   padding: 20px 60px;
   max-width: 1000px;
   margin: 0 auto;
