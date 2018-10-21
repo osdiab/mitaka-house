@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { GlobalStyle } from "src/presentation/theme/GlobalStyle";
 import styled from "src/presentation/theme/styled-components";
+import { Footer } from "./Footer";
 import { Header } from "./Header";
 
 const PageContainer = styled.div`
@@ -17,6 +18,7 @@ export const DefaultLayout: React.StatelessComponent<{}> = ({ children }) => {
       <GlobalStyle />
       <Header />
       {children}
+      <Footer />
     </PageContainer>
   );
 };
