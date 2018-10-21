@@ -178,11 +178,11 @@ function buttonFontSize(size: IButtonProps["size"]) {
     // fallthrough
     case undefined:
     case ButtonSize.MEDIUM:
-      return "1rem";
+      return "1.2rem";
     case ButtonSize.SMALL:
-      return ".75rem";
+      return "1rem";
     case ButtonSize.LARGE:
-      return "1.25rem";
+      return "1.4rem";
   }
 }
 
