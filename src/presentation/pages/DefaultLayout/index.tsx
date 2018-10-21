@@ -1,3 +1,4 @@
+import * as color from "color";
 import * as React from "react";
 
 import { GlobalStyle } from "src/presentation/theme/GlobalStyle";
@@ -7,7 +8,15 @@ import { Header } from "./Header";
 
 const PageContainer = styled.div`
   min-height: 100vh;
-  background: linear-gradient(to top, midnightblue, darkslateblue);
+  background: linear-gradient(
+    to bottom,
+    ${props =>
+      color(props.theme.palette.background)
+        .desaturate(0.4)
+        .lighten(0.6)
+        .string()},
+    ${props => props.theme.palette.background}
+  );
 
   font-size: ${props => props.theme.text.size.paragraph};
 `;
