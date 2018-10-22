@@ -7,17 +7,17 @@ const HeaderMixin = css`
 `;
 
 export const H1 = styled.h1`
-  font-size: 5rem;
+  font-size: 3.5rem;
   ${HeaderMixin};
   ${TextBlockStyle};
 `;
 export const H2 = styled.h2`
-  font-size: 3rem;
+  font-size: 2.75rem;
   ${HeaderMixin};
   ${TextBlockStyle};
 `;
 export const H3 = styled.h3`
-  font-size: 2rem;
+  font-size: 2.25rem;
   ${HeaderMixin};
   ${TextBlockStyle};
 `;
