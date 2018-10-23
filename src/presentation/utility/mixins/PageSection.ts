@@ -8,8 +8,12 @@ export const PageSectionPadding = css`
   }
 `;
 
-export const PageSection = css`
-  ${PageSectionPadding};
+export const PageSectionContentArea = css`
   max-width: 1000px;
   margin: 0 auto;
+`;
+
+export const PageSection = css`
+  ${PageSectionPadding};
+  ${PageSectionContentArea};
 `;

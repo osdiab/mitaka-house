@@ -16,6 +16,7 @@ import { PageBody } from "src/presentation/utility/layout/PageBody";
 import { Link } from "src/presentation/utility/Link";
 import {
   PageSection as PageSectionMixin,
+  PageSectionContentArea,
   PageSectionPadding
 } from "src/presentation/utility/mixins/PageSection";
 import { Emphasis as EmphasisMixin } from "src/presentation/utility/mixins/text/Emphasis";
@@ -79,6 +80,7 @@ const BannerSection = styled.section`
   }
 
   > * {
+    ${PageSectionContentArea};
     position: relative;
     z-index: 1;
   }
@@ -107,7 +109,6 @@ const BannerSubheader = styled(H3)`
 `;
 
 const PriceHighlight = styled(H3)`
-  display: inline-block; // prevents breaking
   color: ${props => props.theme.palette.secondary};
   font-weight: 700;
 `;
