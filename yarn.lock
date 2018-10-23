@@ -785,6 +785,10 @@
   version "4.7.2"
   resolved "https://registry.npmjs.org/@types/history/-/history-4.7.2.tgz#0e670ea254d559241b6eeb3894f8754991e73220"
 
+"@types/is-relative-url@^2.0.0":
+  version "2.0.0"
+  resolved "http://registry.npmjs.org/@types/is-relative-url/-/is-relative-url-2.0.0.tgz#7d696ce6fce86ecb05cc4de24c9759ec84265e14"
+
 "@types/jest@^23.3.5":
   version "23.3.5"
   resolved "https://registry.npmjs.org/@types/jest/-/jest-23.3.5.tgz#870a1434208b60603745bfd214fc3fc675142364"
@@ -4719,6 +4723,12 @@ is-regex@^1.0.4:
 is-regexp@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/is-regexp/-/is-regexp-1.0.0.tgz#fd2d883545c46bac5a633e7b9a09e87fa2cb5069"
+
+is-relative-url@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/is-relative-url/-/is-relative-url-2.0.0.tgz#72902d7fe04b3d4792e7db15f9db84b7204c9cef"
+  dependencies:
+    is-absolute-url "^2.0.0"
 
 is-resolvable@^1.0.0, is-resolvable@^1.1.0:
   version "1.1.0"
