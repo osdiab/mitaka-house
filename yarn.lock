@@ -847,6 +847,10 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
+"@types/smoothscroll-polyfill@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/@types/smoothscroll-polyfill/-/smoothscroll-polyfill-0.3.0.tgz#d5efb13b282e049a5580ea4c5f0a5f696c443e82"
+
 "@types/styled-components@^4.0.1":
   version "4.0.1"
   resolved "https://registry.npmjs.org/@types/styled-components/-/styled-components-4.0.1.tgz#5eb9a5474dbde3becab2bcc8f04e0b8e8dcf8c06"
@@ -8163,6 +8167,10 @@ slice-ansi@1.0.0:
   resolved "https://registry.npmjs.org/slice-ansi/-/slice-ansi-1.0.0.tgz#044f1a49d8842ff307aad6b505ed178bd950134d"
   dependencies:
     is-fullwidth-code-point "^2.0.0"
+
+smoothscroll-polyfill@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.npmjs.org/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.3.tgz#94e5f2d604efcceb53f23ff0380d7ea7280d4bff"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
