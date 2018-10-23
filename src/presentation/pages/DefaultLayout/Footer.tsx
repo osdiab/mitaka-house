@@ -55,7 +55,7 @@ export const Footer: React.StatelessComponent<{}> = () => (
         and make it your own.
       </Paragraph>
       <Paragraph>
-        <Link to={`${window.location.origin}/assets/images/CREDITS.txt`}>
+        <Link forceExternal={true} to="/assets/images/CREDITS.txt">
           Image credits
         </Link>
       </Paragraph>
