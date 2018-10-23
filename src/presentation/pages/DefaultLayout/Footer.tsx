@@ -2,10 +2,10 @@ import * as color from "color";
 import * as React from "react";
 
 import styled from "src/presentation/theme/styled-components";
-import { H2 } from "src/presentation/utility/Heading";
+import { H2, H3 } from "src/presentation/utility/Heading";
 import { Link } from "src/presentation/utility/Link";
 import { PageSection } from "src/presentation/utility/mixins/PageSection";
-import { Emphasis } from "src/presentation/utility/mixins/text/Emphasis";
+import { Emphasis as EmphasisMixin } from "src/presentation/utility/mixins/text/Emphasis";
 import { Paragraph } from "src/presentation/utility/Paragraph";
 
 const InfoSection = styled.section`
@@ -26,18 +26,24 @@ const ContactSection = styled.section`
   padding-bottom: 2rem;
   align-self: flex-start;
 `;
-const EmphasisH2 = styled(H2)`
-  ${Emphasis};
+const ContactSectionTitle = styled(H2)`
+  ${EmphasisMixin};
+`;
+
+const Emphasis = styled.span`
+  ${EmphasisMixin};
 `;
 export const Footer: React.StatelessComponent<{}> = () => (
   <footer>
     <ContactSection id="contact">
-      <EmphasisH2>Get in touch</EmphasisH2>
+      <ContactSectionTitle id="contact">Get in touch</ContactSectionTitle>
+      <H3>
+        Inquire about your new home in Tokyo <Emphasis>today</Emphasis>
+      </H3>
       <Paragraph>
-        Feel free to{" "}
-        <Link to="mailto://hello@omardiab.com">shoot me an email</Link>
-        {" or "}
-        <Link to="https://linkedin.com/in/osdiab">check my LinkedIn</Link>.
+        Shoot us an email at{" "}
+        <Link to="mailto:hi@mitakahome.com">hi@mitakahome.com</Link>, and we'll
+        get everything squared off. Welcome to your new home in Tokyo!
       </Paragraph>
     </ContactSection>
     <InfoSection>
@@ -47,6 +53,11 @@ export const Footer: React.StatelessComponent<{}> = () => (
           fork it on Github
         </Link>{" "}
         and make it your own.
+      </Paragraph>
+      <Paragraph>
+        <Link to={`${window.location.origin}/assets/images/CREDITS.txt`}>
+          Image credits
+        </Link>
       </Paragraph>
       <Paragraph>Mitaka House, {new Date().getFullYear()}</Paragraph>
     </InfoSection>
