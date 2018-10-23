@@ -5,11 +5,7 @@ import * as React from "react";
 import styled, {
   ThemedStyledProps
 } from "src/presentation/theme/styled-components";
-import {
-  Link,
-  LinkAppearance,
-  LinkDestination
-} from "src/presentation/utility/Link";
+import { Link, LinkAppearance } from "src/presentation/utility/Link";
 import { logger } from "src/utility/logger";
 import { OptionalMembers } from "src/utility/types";
 import { highlightColor } from "../theme/palette";
@@ -38,7 +34,7 @@ export interface IOnClick<Kind extends ButtonTargetKind, action> {
 }
 
 export type OnClick =
-  | IOnClick<ButtonTargetKind.LINK, LinkDestination>
+  | IOnClick<ButtonTargetKind.LINK, string>
   | IOnClick<ButtonTargetKind.FUNCTION, () => void>
   | IOnClick<ButtonTargetKind.SUBMIT, undefined>;
 
