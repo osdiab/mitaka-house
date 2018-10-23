@@ -12,8 +12,7 @@ const PageContainer = styled.div`
     to bottom,
     ${props =>
       color(props.theme.palette.background)
-        .desaturate(0.4)
-        .lighten(0.6)
+        .lighten(0.2)
         .string()},
     ${props => props.theme.palette.background}
   );
