@@ -3,7 +3,7 @@ import * as React from "react";
 
 import styled from "src/presentation/theme/styled-components";
 import { H2 } from "src/presentation/utility/Heading";
-import { Link, LinkDestinationKind } from "src/presentation/utility/Link";
+import { Link } from "src/presentation/utility/Link";
 import { PageSection } from "src/presentation/utility/mixins/PageSection";
 import { Emphasis } from "src/presentation/utility/mixins/text/Emphasis";
 import { Paragraph } from "src/presentation/utility/Paragraph";
@@ -33,35 +33,15 @@ export const Footer: React.StatelessComponent<{}> = () => (
       <EmphasisH2>Get in touch</EmphasisH2>
       <Paragraph>
         Feel free to{" "}
-        <Link
-          to={{
-            kind: LinkDestinationKind.EXTERNAL,
-            destination: "mailto://hello@omardiab.com"
-          }}
-        >
-          shoot me an email
-        </Link>
+        <Link to="mailto://hello@omardiab.com">shoot me an email</Link>
         {" or "}
-        <Link
-          to={{
-            kind: LinkDestinationKind.EXTERNAL,
-            destination: "https://linkedin.com/in/osdiab"
-          }}
-        >
-          check my LinkedIn
-        </Link>
-        .
+        <Link to="https://linkedin.com/in/osdiab">check my LinkedIn</Link>.
       </Paragraph>
     </ContactSection>
     <InfoSection>
       <Paragraph>
         Like this site? Feel free to{" "}
-        <Link
-          to={{
-            kind: LinkDestinationKind.EXTERNAL,
-            destination: "https://github.com/osdiab/osdiab.github.io/"
-          }}
-        >
+        <Link to="https://github.com/osdiab/osdiab.github.io/">
           fork it on Github
         </Link>{" "}
         and make it your own.

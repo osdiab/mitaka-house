@@ -4,25 +4,22 @@ import styled from "src/presentation/theme/styled-components";
 import { H2, H3, H4 } from "src/presentation/utility/Heading";
 import { INavBarProps, NavBar } from "src/presentation/utility/layout/NavBar";
 import { PageBody } from "src/presentation/utility/layout/PageBody";
-import { Link, LinkDestinationKind } from "src/presentation/utility/Link";
+import { Link } from "src/presentation/utility/Link";
 import { Emphasis } from "src/presentation/utility/mixins/text/Emphasis";
 import { Paragraph } from "src/presentation/utility/Paragraph";
 
 const pageEntries: INavBarProps["entries"] = [
   {
     displayText: "Professional life",
-    link: {
-      kind: LinkDestinationKind.INTERNAL,
-      destination: "#professional-life"
-    }
+    to: "#professional-life"
   },
   {
     displayText: "Passions",
-    link: { kind: LinkDestinationKind.INTERNAL, destination: "#passions" }
+    to: "#passions"
   },
   {
     displayText: "Get in touch",
-    link: { kind: LinkDestinationKind.INTERNAL, destination: "#contact" }
+    to: "#contact"
   }
 ];
 
@@ -58,40 +55,19 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
           <Paragraph>
             If you'd like to keep stay in contact, feel free to{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.INTERNAL,
-                destination: "#contact"
-              }}
-            >
-              get in touch
-            </Link>
-            .
+            <Link to="#contact">get in touch</Link>.
           </Paragraph>
 
           <SectionSubtitle>Presently,</SectionSubtitle>
           <H4>
-            I am co-founding{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://raha.app"
-              }}
-            >
-              Raha
-            </Link>
-            , a non-profit to make the value of a universal basic income
-            tangible today.
+            I am co-founding <Link to="https://raha.app">Raha</Link>, a
+            non-profit to make the value of a universal basic income tangible
+            today.
           </H4>
           <Paragraph>
             I designed the frameworks and infrastructure for the entire
             technology stack, from{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://github.com/rahafoundation/raha-api"
-              }}
-            >
+            <Link to="https://github.com/rahafoundation/raha-api">
               our server and API
             </Link>{" "}
             to mobile application.
@@ -105,50 +81,21 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
           <Paragraph>
             I also wireframed, designed and implemented the UI and UX of the the
-            app{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://raha.app"
-              }}
-            >
-              and website
-            </Link>
-            , besides the hand-drawn characters (thanks Tina!).
+            app <Link to="https://raha.app">and website</Link>, besides the
+            hand-drawn characters (thanks Tina!).
           </Paragraph>
 
           <SectionSubtitle>In retrospect,</SectionSubtitle>
           <H4>
-            At{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://clever.com"
-              }}
-            >
-              Clever
-            </Link>
-            , I built{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://clever.com/products/badges"
-              }}
-            >
-              Clever Badges
-            </Link>
-            , enabling PreK-2nd grade students to use education apps in the
+            At <Link to="https://clever.com">Clever</Link>, I built{" "}
+            <Link to="https://clever.com/products/badges">Clever Badges</Link>,
+            enabling PreK-2nd grade students to use education apps in the
             classroom <EmphasisSpan>over 50 million times.</EmphasisSpan>
           </H4>
           <Paragraph>
             I also played a key role in deciding the company's frontend stack. I
             lead development on our{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://clever.github.io/components"
-              }}
-            >
+            <Link to="https://clever.github.io/components">
               React component library and design system
             </Link>{" "}
             to make our visual style consistent, and advocated and delivered
@@ -189,17 +136,10 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
           <Paragraph>
             I generally align with the idea pushed by{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://www.sfyimby.org/"
-              }}
-            >
-              SFYIMBY
-            </Link>{" "}
-            and similar groups throughout the country, that the acute shortage
-            of supply coupled with weak transportation infrastructure drives
-            American housing prices up.
+            <Link to="https://www.sfyimby.org/">SFYIMBY</Link> and similar
+            groups throughout the country, that the acute shortage of supply
+            coupled with weak transportation infrastructure drives American
+            housing prices up.
           </Paragraph>
           <Paragraph>
             Any long-term strategy to reduce the cost of living in major
@@ -210,16 +150,8 @@ export class HomePage extends React.Component<{}> {
             more likely scenario.
           </Paragraph>
           <Paragraph>
-            Feel free to{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.INTERNAL,
-                destination: "#contact"
-              }}
-            >
-              get in touch
-            </Link>{" "}
-            if you'd like to chat about it.
+            Feel free to <Link to="#contact">get in touch</Link> if you'd like
+            to chat about it.
           </Paragraph>
 
           <SectionSubtitle>Electronic music</SectionSubtitle>
@@ -227,32 +159,15 @@ export class HomePage extends React.Component<{}> {
           <Paragraph>
             I haven't been active as of late, but my mixes run a broad variety
             of styles from{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://www.mixcloud.com/osdiab/club-montage/"
-              }}
-            >
+            <Link to="https://www.mixcloud.com/osdiab/club-montage/">
               smooth, soulful vibes
             </Link>
             {" to "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination:
-                  "https://soundcloud.com/osdiab/yellow-five-bob-progressive-1"
-              }}
-            >
+            <Link to="https://soundcloud.com/osdiab/yellow-five-bob-progressive-1">
               minimal, tech-house
             </Link>
             {" and "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination:
-                  "https://soundcloud.com/osdiab/2011-10-26-lucid_dreaming?in=osdiab/sets/dj-mixes"
-              }}
-            >
+            <Link to="https://soundcloud.com/osdiab/2011-10-26-lucid_dreaming?in=osdiab/sets/dj-mixes">
               euphoric trance
             </Link>
             . My mixing style tends to be smooth, seamless, harmonic mixes.
@@ -264,22 +179,11 @@ export class HomePage extends React.Component<{}> {
           <H4>I also produce my own tunes.</H4>
           <Paragraph>
             It's been a while since I've been active, but I feel good about{" "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination:
-                  "https://soundcloud.com/osdiab/work-in-progress-andy-mckee"
-              }}
-            >
+            <Link to="https://soundcloud.com/osdiab/work-in-progress-andy-mckee">
               this remix of Andy McKee
             </Link>
             {" and "}
-            <Link
-              to={{
-                kind: LinkDestinationKind.EXTERNAL,
-                destination: "https://soundcloud.com/osdiab/existentialism"
-              }}
-            >
+            <Link to="https://soundcloud.com/osdiab/existentialism">
               this simple chiptunesey house song
             </Link>{" "}
             I made a while back.

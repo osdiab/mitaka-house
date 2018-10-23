@@ -1,12 +1,12 @@
 import * as React from "react";
 
 import styled from "src/presentation/theme/styled-components";
-import { Link, LinkDestination } from "src/presentation/utility/Link";
+import { Link } from "src/presentation/utility/Link";
 import { PageSection } from "../mixins/PageSection";
 
 export interface INavBarEntry {
   displayText: string;
-  link: LinkDestination;
+  to: string;
 }
 export interface INavBarProps {
   entries: INavBarEntry[];
@@ -36,9 +36,9 @@ export const NavBar: React.StatelessComponent<INavBarProps> = ({ entries }) => {
   return (
     <NavElem>
       <NavList>
-        {entries.map(({ displayText, link }, index) => (
+        {entries.map(({ displayText, to }, index) => (
           <li key={index}>
-            <Link to={link}>{displayText}</Link>
+            <Link to={to}>{displayText}</Link>
           </li>
         ))}
       </NavList>
