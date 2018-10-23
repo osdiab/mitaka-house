@@ -37,10 +37,8 @@ export const NavBar: React.StatelessComponent<INavBarProps> = ({ entries }) => {
     <NavElem>
       <NavList>
         {entries.map(({ displayText, link }, index) => (
-          <li>
-            <Link key={index} to={link}>
-              {displayText}
-            </Link>
+          <li key={index}>
+            <Link to={link}>{displayText}</Link>
           </li>
         ))}
       </NavList>
