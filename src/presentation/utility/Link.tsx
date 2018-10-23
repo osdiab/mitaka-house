@@ -1,6 +1,6 @@
 // need to ignore import error due to commonjs export format
 // @ts-ignore
-import isRelativeUrl = require("is-relative-url");
+import * as isRelativeUrl from "is-relative-url";
 import * as React from "react";
 import {
   HashLink as RouterLink,
