@@ -130,6 +130,19 @@ function getColorParams(
   };
 }
 
+function paddingSize(props: ThemedStyledProps<StyledButtonProps>): string {
+  switch (props.size) {
+    default:
+      logInvalidSize(props.size);
+    case ButtonSize.SMALL:
+      return "8px 15px";
+    case ButtonSize.MEDIUM:
+      return "10px 20px";
+    case ButtonSize.LARGE:
+      return "15px 25px";
+  }
+}
+
 type StyledButtonProps = Pick<
   Required<IButtonProps>,
   "size" | "disabled" | "role"
@@ -139,7 +152,7 @@ const StyledButton = styled.button<StyledButtonProps>`
   border: 2px solid;
   border-color: ${props => borderColor(getColorParams(props))};
   border-radius: 2px;
-  padding: 10px 20px;
+  padding: ${props => paddingSize(props)};
   background-color: ${props => backgroundColor(getColorParams(props))};
   font-size: ${props => buttonFontSize(props.size)};
   font-weight: 700;

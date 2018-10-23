@@ -37,7 +37,7 @@ export const Header: React.StatelessComponent<{}> = () => (
   <HeaderElem>
     <Avatar />
     <BannerTitle>
-      I am <HighlightName>Omar Diab.</HighlightName>
+      <HighlightName>Mitaka House</HighlightName>
     </BannerTitle>
   </HeaderElem>
 );

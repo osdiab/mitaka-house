@@ -14,9 +14,11 @@ const InfoSection = styled.section`
   align-items: center;
   text-align: center;
   padding: 2rem;
+  color: white;
   background-color: ${props =>
-    color(props.theme.palette.background)
-      .darken(0.2)
+    color(props.theme.palette.primary)
+      .darken(0.4)
+      .desaturate(0.4)
       .string()};
 `;
 const ContactSection = styled.section`
@@ -41,12 +43,12 @@ export const Footer: React.StatelessComponent<{}> = () => (
     <InfoSection>
       <Paragraph>
         Like this site? Feel free to{" "}
-        <Link to="https://github.com/osdiab/osdiab.github.io/">
+        <Link to="https://github.com/osdiab/mitaka-house/">
           fork it on Github
         </Link>{" "}
         and make it your own.
       </Paragraph>
-      <Paragraph>Omar Diab, {new Date().getFullYear()}</Paragraph>
+      <Paragraph>Mitaka House, {new Date().getFullYear()}</Paragraph>
     </InfoSection>
   </footer>
 );

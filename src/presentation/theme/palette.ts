@@ -1,9 +1,9 @@
 import * as color from "color";
 
 export const palette = {
-  primary: "lightcoral",
-  secondary: "goldenrod",
-  background: "midnightblue",
+  primary: "#5C5FBC",
+  secondary: "#D3697D",
+  background: "#F9F7F3",
   disabled: "#888888"
 };
 
