@@ -3,10 +3,13 @@ import {
   HashLink as RouterLink,
   HashLinkProps as RouterLinkProps
 } from "react-router-hash-link";
+import * as smoothscroll from "smoothscroll-polyfill";
 
 import styled from "src/presentation/theme/styled-components";
 import { logger } from "src/utility/logger";
 import { highlightColor } from "../theme/palette";
+
+smoothscroll.polyfill();
 
 export enum LinkDestinationKind {
   INTERNAL = "INTERNAL",
