@@ -22,6 +22,7 @@ export enum LinkAppearance {
 export interface ILinkProps {
   to: string;
   appearance?: LinkAppearance;
+  forceExternal?: boolean;
 }
 
 const HyperlinkA = styled.a`
@@ -89,7 +90,7 @@ const RelativeLink: React.StatelessComponent<ILinkProps> = ({
  * A link to external content.
  */
 export const Link: React.StatelessComponent<ILinkProps> = props => {
-  return isRelativeUrl(props.to) ? (
+  return !props.forceExternal && isRelativeUrl(props.to) ? (
     <RelativeLink {...props} />
   ) : (
     <AbsoluteLink {...props} />
