@@ -20,7 +20,6 @@ import {
   PageSectionPadding
 } from "src/presentation/utility/mixins/PageSection";
 import { Emphasis as EmphasisMixin } from "src/presentation/utility/mixins/text/Emphasis";
-import { Paragraph } from "src/presentation/utility/Paragraph";
 
 const pageEntries: INavBarProps["entries"] = [
   {
@@ -50,9 +49,6 @@ const PageSectionTitle = styled(H2)`
 `;
 const SectionSubtitle = styled(H3)`
   color: ${props => props.theme.palette.primary};
-`;
-const Emphasis = styled.span`
-  ${EmphasisMixin};
 `;
 
 const BannerSection = styled.section`
@@ -170,16 +166,6 @@ export class HomePage extends React.Component<{}> {
           <SectionSubtitle>
             Moving to Japan can be intimidating.
           </SectionSubtitle>
-
-          <PageSectionTitle id="contact">Get in touch</PageSectionTitle>
-          <H3>
-            Inquire about your new home in Tokyo <Emphasis>today</Emphasis>
-          </H3>
-          <Paragraph>
-            Shoot us an email at{" "}
-            <Link to="mailto:hi@mitakahome.com">hi@mitakahome.com</Link>, and
-            we'll get everything squared off. Welcome to your new home in Tokyo!
-          </Paragraph>
         </PageBody>
       </>
     );
