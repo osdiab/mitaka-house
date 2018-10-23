@@ -1,3 +1,6 @@
+// need to ignore import error due to commonjs export format
+// @ts-ignore
+import isRelativeUrl = require("is-relative-url");
 import * as React from "react";
 import {
   HashLink as RouterLink,
@@ -11,30 +14,13 @@ import { highlightColor } from "../theme/palette";
 
 smoothscroll.polyfill();
 
-export enum LinkDestinationKind {
-  INTERNAL = "INTERNAL",
-  EXTERNAL = "EXTERNAL"
-}
-
 export enum LinkAppearance {
   HYPERLINK = "HYPERLINK",
   UNSTYLED = "UNSTYLED"
 }
 
-export interface ILinkDestination<
-  Kind extends LinkDestinationKind,
-  Destination extends string = string
-> {
-  kind: Kind;
-  destination: Destination;
-}
-
-export type LinkDestination =
-  | ILinkDestination<LinkDestinationKind.INTERNAL>
-  | ILinkDestination<LinkDestinationKind.EXTERNAL>;
-
 export interface ILinkProps {
-  to: LinkDestination;
+  to: string;
   appearance?: LinkAppearance;
 }
 
@@ -59,51 +45,53 @@ function logInvalidAppearance(appearance: never) {
   );
 }
 
-/**
- * A link to external content.
- */
-export const Link: React.StatelessComponent<ILinkProps> = ({
+const AbsoluteLink: React.StatelessComponent<ILinkProps> = ({
   to,
   appearance,
   children
 }) => {
-  switch (to.kind) {
-    case LinkDestinationKind.INTERNAL: {
-      const props: RouterLinkProps = {
-        children,
-        smooth: true,
-        to: to.destination
-      };
-      switch (appearance) {
-        default:
-          logInvalidAppearance(appearance);
-        // fallthrough
-        case undefined: // fallthrough
-        case LinkAppearance.HYPERLINK:
-          return <HyperlinkRouterLink {...props} />;
-        case LinkAppearance.UNSTYLED:
-          return <UnstyledRouterLink {...props} />;
-      }
-    }
-    case LinkDestinationKind.EXTERNAL: {
-      const props = { href: to.destination, children };
-      switch (appearance) {
-        default:
-          logInvalidAppearance(appearance);
-        // fallthrough
-        case undefined: // fallthrough
-        case LinkAppearance.HYPERLINK:
-          return <HyperlinkA {...props} />;
-        case LinkAppearance.UNSTYLED:
-          return <UnstyledA {...props} />;
-      }
-    }
-    default: {
-      const errorMessage = `Invalid link destination kind: '${
-        (to as ILinkProps["to"]).kind
-      }'. Not rendering.`;
-      logger.error(errorMessage);
-      return <React.Fragment />;
-    }
+  const props = { href: to, children };
+  switch (appearance) {
+    default:
+      logInvalidAppearance(appearance);
+    // fallthrough
+    case undefined: // fallthrough
+    case LinkAppearance.HYPERLINK:
+      return <HyperlinkA {...props} />;
+    case LinkAppearance.UNSTYLED:
+      return <UnstyledA {...props} />;
   }
+};
+
+const RelativeLink: React.StatelessComponent<ILinkProps> = ({
+  to,
+  appearance,
+  children
+}) => {
+  const linkProps: RouterLinkProps = {
+    children,
+    smooth: true,
+    to
+  };
+  switch (appearance) {
+    default:
+      logInvalidAppearance(appearance);
+    // fallthrough
+    case undefined: // fallthrough
+    case LinkAppearance.HYPERLINK:
+      return <HyperlinkRouterLink {...linkProps} />;
+    case LinkAppearance.UNSTYLED:
+      return <UnstyledRouterLink {...linkProps} />;
+  }
+};
+
+/**
+ * A link to external content.
+ */
+export const Link: React.StatelessComponent<ILinkProps> = props => {
+  return isRelativeUrl(props.to) ? (
+    <RelativeLink {...props} />
+  ) : (
+    <AbsoluteLink {...props} />
+  );
 };
