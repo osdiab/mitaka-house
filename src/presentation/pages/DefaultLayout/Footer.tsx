@@ -28,7 +28,7 @@ const ContactSection = styled.section`
   align-self: flex-start;
 `;
 const ContactSectionTitle = styled(H2)`
-  color: ${props => props.theme.palette.interactive};
+  color: ${props => props.theme.palette.secondary};
 `;
 
 const Emphasis = styled.span`
