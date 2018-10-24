@@ -41,7 +41,7 @@ const pageEntries: INavBarProps["entries"] = [
 ];
 
 const PageSectionTitle = styled(H2)`
-  color: ${props => props.theme.palette.secondary};
+  color: ${props => props.theme.palette.interactive};
 `;
 const SectionSubtitle = styled(H3)`
   color: ${props => props.theme.palette.primary};
@@ -104,7 +104,7 @@ const BannerSubheader = styled(H3)`
 `;
 
 const PriceHighlight = styled(H3)`
-  color: ${props => props.theme.palette.secondary};
+  color: ${props => props.theme.palette.interactive};
   font-weight: 700;
 `;
 
@@ -222,7 +222,7 @@ export class HomePage extends React.Component<{}> {
             You can also experience{" "}
             <Link to="http://www.yumorinosato.com/">
               a beautiful, natural onsen (hot spring) at historic Jindaiji
-              Temple (深大寺)
+              Temple (深大)
             </Link>
             , 15 minutes from Mitaka House by bus.
           </Paragraph>

@@ -38,7 +38,7 @@ const TextLogo = styled.img`
   max-width: 100%;
 `;
 const Subheader = styled(H3)`
-  color: ${props => props.theme.palette.secondary};
+  color: ${props => props.theme.palette.interactive};
   display: block;
 `;
 
