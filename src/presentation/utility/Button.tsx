@@ -1,4 +1,3 @@
-import * as color from "color";
 import * as R from "ramda";
 import * as React from "react";
 
@@ -69,9 +68,7 @@ function fontColor({ disabled, role, palette }: ButtonColorParameters): string {
     }
     return palette.primary;
   }
-  return color(disabled ? palette.disabled : palette.primary).isLight()
-    ? "black"
-    : "white";
+  return disabled ? "black" : "white";
 }
 
 function hoverFontColor(params: ButtonColorParameters): string {
