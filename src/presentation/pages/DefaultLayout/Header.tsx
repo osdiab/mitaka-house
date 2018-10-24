@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "src/presentation/theme/styled-components";
-import { H1 } from "src/presentation/utility/Heading";
+import { H3 } from "src/presentation/utility/Heading";
 import { PageSection } from "src/presentation/utility/mixins/PageSection";
 
 const HeaderElem = styled.header`
@@ -10,34 +10,44 @@ const HeaderElem = styled.header`
   margin-bottom: 0;
   border: 0;
 `;
-const Avatar = styled.span`
+
+const Logo = styled.span`
   max-width: 140px;
-  min-height: 140px;
+  min-width: 100px;
   flex: 1;
   align-self: stretch;
 
-  background-image: url(/assets/images/avatar.png);
-  background-size: cover;
+  background-image: url(/assets/images/logo/logo.png);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
-  margin-right: 20px;
-  border-radius: 2px;
+  margin-right: 10px;
+  @media (min-width: ${props => props.theme.mediaQueries.sizes.small}) {
+    margin-right: 20px;
+  }
 `;
-const BannerTitle = styled(H1)`
-  margin: 0;
+
+const TextSection = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
+const TextLogo = styled.img`
+  flex-basis: 5rem;
   flex: 1;
+  max-width: 100%;
 `;
-const HighlightName = styled.span`
-  color: ${props => props.theme.palette.primary};
-  display: inline-block;
+const Subheader = styled(H3)`
+  color: ${props => props.theme.palette.secondary};
+  display: block;
 `;
 
 export const Header: React.StatelessComponent<{}> = () => (
   <HeaderElem>
-    <Avatar />
-    <BannerTitle>
-      <HighlightName>Mitaka House</HighlightName>
-    </BannerTitle>
+    <Logo />
+    <TextSection>
+      <TextLogo src="/assets/images/logo/text-logo.svg" />
+      <Subheader>三鷹ハウス</Subheader>
+    </TextSection>
   </HeaderElem>
 );
