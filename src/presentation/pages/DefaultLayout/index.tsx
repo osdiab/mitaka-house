@@ -8,6 +8,7 @@ import { Header } from "./Header";
 
 const PageContainer = styled.div`
   min-height: 100vh;
+  background: ${props => props.theme.palette.background};
   background: linear-gradient(
     to bottom,
     ${props =>
