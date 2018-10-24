@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import { palette } from "src/presentation/theme/palette";
 import styled from "src/presentation/theme/styled-components";
 import { Link } from "src/presentation/utility/Link";
 import { Button, ButtonTargetKind } from "../Button";
@@ -53,10 +52,7 @@ export const NavBar: React.StatelessComponent<INavBarProps> = ({ entries }) => {
             {kind === NavEntryKind.LINK ? (
               <Link to={to}>{displayText}</Link>
             ) : (
-              <Button
-                color={palette.interactive}
-                onClick={{ kind: ButtonTargetKind.LINK, action: to }}
-              >
+              <Button onClick={{ kind: ButtonTargetKind.LINK, action: to }}>
                 {displayText}
               </Button>
             )}
