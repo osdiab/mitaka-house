@@ -20,6 +20,7 @@ import {
   PageSectionPadding
 } from "src/presentation/utility/mixins/PageSection";
 import { Emphasis as EmphasisMixin } from "src/presentation/utility/mixins/text/Emphasis";
+import { Paragraph } from "src/presentation/utility/Paragraph";
 
 const pageEntries: INavBarProps["entries"] = [
   {
@@ -96,6 +97,9 @@ const RentCallToAction = styled.section`
   }
 `;
 
+const Emphasis = styled.span`
+  ${EmphasisMixin};
+`;
 const BannerHeader = styled(H2)`
   ${EmphasisMixin};
 `;
@@ -109,6 +113,11 @@ const PriceHighlight = styled(H3)`
   font-weight: 700;
 `;
 
+const PlaceInfo = styled(Paragraph)`
+  font-style: italic;
+  color: #666666;
+`;
+
 export class HomePage extends React.Component<{}> {
   public render() {
     return (
@@ -117,9 +126,9 @@ export class HomePage extends React.Component<{}> {
         <BannerSection>
           <BannerHeader>Welcome to your new home in Tokyo.</BannerHeader>
           <BannerSubheader>
-            Peace. Authenticity. Minutes from hot neighborhoods.{" "}
+            Peace, authenticity, just minutes from the hottest neighborhoods.
           </BannerSubheader>
-          <PriceHighlight>45,000円/mo</PriceHighlight>
+          <PriceHighlight>45,000円 month-to-month</PriceHighlight>
         </BannerSection>
 
         <RentCallToAction>
@@ -141,31 +150,109 @@ export class HomePage extends React.Component<{}> {
           </PageSectionTitle>
 
           <SectionSubtitle>
-            Mitaka House is just minutes from Tokyo's hottest neighborhoods.
+            Mitaka House is near many of Tokyo's hottest neighborhoods.
           </SectionSubtitle>
+
           <H3>吉祥寺 Kichijōji</H3>
+          <PlaceInfo>
+            20 minutes from Mitaka House by bus (every 5-7 minutes), or 45
+            minutes by foot.
+          </PlaceInfo>
+          <Paragraph>
+            Rated{" "}
+            <Link to="https://resources.realestate.co.jp/living/best-places-to-live-in-tokyo-2017-survey/">
+              Eastern Japan's #1 most livable city
+            </Link>
+            , Kichijōji is home to some of Tokyo's best cafés, restaurants,
+            clothing and thrift stores, as well as{" "}
+            <Emphasis>Inokashira Park</Emphasis>, known for its cherry blossoms
+            (sakura), swan boats, and the{" "}
+            <Emphasis>Studio Ghibli Museum</Emphasis>.
+          </Paragraph>
 
           <H3>下北沢 Shimokitazawa</H3>
+          <PlaceInfo>
+            10 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
+          </PlaceInfo>
 
           <H3>渋谷 Shibuya</H3>
+          <PlaceInfo>
+            15 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
+          </PlaceInfo>
 
           <H3>新宿 Shinjuku</H3>
+          <PlaceInfo>
+            20 minutes from Kichijōji by JR Chūō Line (JR中央線).
+          </PlaceInfo>
 
-          <H3>中野 Mitaka</H3>
+          <H3>三鷹 Mitaka</H3>
+          <PlaceInfo>Home, sweet home.</PlaceInfo>
+          <Paragraph>
+            Mitaka House is in Shinkawa (新川), a quiet neighborhood with small,
+            local restaurants, some farms you can buy fresh produce from
+            directly, and the lovely Maruike (丸池公園) and Shinkawa parks.
+          </Paragraph>
+          <Paragraph>
+            You can also experience{" "}
+            <Link to="http://www.yumorinosato.com/">
+              a beautiful, natural onsen (hot spring) at historic Jindaiji
+              Temple (神代寺)
+            </Link>
+            , 15 minutes from Mitaka House by bus.
+          </Paragraph>
+          <Paragraph>
+            Conveniently, 7/11, Lawson, and Family Mart all within 2-4 minute
+            walks. Two supermarkets, a pharmacy and the Kyōrin University
+            Hospital (杏林大学病院) are within 5 minute walks as well (don't
+            worry, you'll almost never hear sirens here!).
+          </Paragraph>
 
           <PageSectionTitle id="room-description">The Rooms</PageSectionTitle>
           <SectionSubtitle>Simple Living</SectionSubtitle>
+          <Paragraph>
+            Experience authentic Japanese life, sleeping on a comfortable futon
+            bed (布団) on tatami mats, cooking food in the modestly sized
+            kitchen and enjoying the cozy, quiet atmosphere.
+          </Paragraph>
+          <Paragraph>
+            Apartments at Mitaka House are 6畳 (jō, the size of a tatami mat),{" "}
+            <Link to="https://resources.realestate.co.jp/living/1r-1k-1dk-1ldk-apartment-whats-the-difference-and-which-should-i-rent/">
+              1K apartments
+            </Link>
+            . That means there's a separated kitchen and bedroom, and the
+            combined bedroom/living room area is about 10m² (107 ft²).
+          </Paragraph>
+
+          <SectionSubtitle>Foreign- and short-term friendly</SectionSubtitle>
+          <Paragraph>
+            The landlord is able to speak some English, but if you need any
+            help, we've got you're back.
+          </Paragraph>
+          <Paragraph>
+            We'll <Emphasis>explain to you in English</Emphasis> how to pay your
+            bills, where to wash your clothes, how to get unlimited bus and
+            train passes, and anything else you need to have a pleasant time in
+            Japan.
+          </Paragraph>
+          <Paragraph>
+            We will also{" "}
+            <Emphasis>provide the basic appliances you'd expect</Emphasis> in a
+            western apartment, including a refrigerator for your leftovers, and
+            air conditioning for hot summer days.
+          </Paragraph>
+          <Paragraph>
+            We are also happy to accept{" "}
+            <Emphasis>month-to-month rentals</Emphasis>, since we understand how
+            hard it is to find such arrangements in Japan.
+          </Paragraph>
 
           <SectionSubtitle>
-            Affordable rent, starting at 45,000円
+            Affordable rent, starting at 45,000円/mo
           </SectionSubtitle>
-
-          <PageSectionTitle id="amenities-description">
-            We're at your service.
-          </PageSectionTitle>
-          <SectionSubtitle>
-            Moving to Japan can be intimidating.
-          </SectionSubtitle>
+          <Paragraph>
+            You know how expensive Tokyo can be, so there's not much more to say
+            about this!
+          </Paragraph>
         </PageBody>
       </>
     );
