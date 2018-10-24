@@ -159,26 +159,56 @@ export class HomePage extends React.Component<{}> {
               Eastern Japan's #1 most livable city
             </Link>
             , Kichijōji is home to some of Tokyo's best cafés, restaurants,
-            clothing and thrift stores, as well as{" "}
+            designer clothing and thrift stores, as well as{" "}
             <Emphasis>Inokashira Park</Emphasis>, known for its cherry blossoms
             (sakura), swan boats, and the{" "}
-            <Emphasis>Studio Ghibli Museum</Emphasis>.
+            <Link to="http://www.ghibli-museum.jp/en/">
+              Studio Ghibli Museum
+            </Link>{" "}
+            (we'll help you get the ¥1,000 tickets how locals do it!).
           </Paragraph>
 
           <H3>下北沢 Shimokitazawa</H3>
           <PlaceInfo>
             10 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
+          <Paragraph>
+            Explore every nook and cranny of Shimokitazawa, a neighborhood
+            dedicated to everything artistic and quirky. Shop at cheap or
+            high-end vintage clothes shops, venture underground to listen to
+            Jazz in a tiny bar with a huge sound at{" "}
+            <Link to="http://www.rpmshimokita.com/">Music Bar RPM</Link>, sip on
+            chai while flipping through vinyl records at{" "}
+            <Link to="http://city-country-city.com/">City Country City</Link>,
+            and eat vegan, organic food from a hammock or kotatsu (炬燵) at{" "}
+            <Link to="http://cafestayhappy.com/">Café Stay Happy</Link>.
+          </Paragraph>
 
           <H3>渋谷 Shibuya</H3>
           <PlaceInfo>
             15 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
+          <Paragraph>
+            The beating heart of youth culture, shopping, and entertainment in
+            Tokyo, Shibuya has it all. From the Starbucks at Tsutaya, see
+            Shibuya Crossing, the busiest intersection in the world. Find some
+            cheap, delicious eats (we'll tell you where to go!), shop at nearby
+            fashion capital of the world, Harajuku, and then get ready for a
+            night on the town (maybe until the trains start running again in the
+            morning!).
+          </Paragraph>
 
           <H3>新宿 Shinjuku</H3>
           <PlaceInfo>
             20 minutes from Kichijōji by JR Chūō Line (JR中央線).
           </PlaceInfo>
+          <Paragraph>
+            Being the busiest train station on the planet, Shinjuku is not just
+            an incredibly lively place at all times of day—it's also a great
+            gateway to all of Tokyo and Japan. Shop in Shinjuku by day, dine and
+            drink by night, and catch an express train to catch your Shinkansen
+            to Kyoto tomorrow!
+          </Paragraph>
 
           <H3>三鷹 Mitaka</H3>
           <PlaceInfo>Home, sweet home.</PlaceInfo>
@@ -216,6 +246,12 @@ export class HomePage extends React.Component<{}> {
             </Link>
             . That means there's a separated kitchen and bedroom, and the
             combined bedroom/living room area is about 10m² (107 ft²).
+          </Paragraph>
+          <Paragraph>
+            The apartment does not have a washing machine, but you can walk 10
+            minutes and bathe in the public bath (銭湯) while your clothes wash
+            in the laundromat next door, or do your laundry while working at a
+            cafe near Mitaka Station.
           </Paragraph>
 
           <SectionSubtitle>Foreign- and short-term friendly</SectionSubtitle>
