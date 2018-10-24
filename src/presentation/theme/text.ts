@@ -1,6 +1,6 @@
 export const text = {
-  fontFamily: "Source Serif Pro",
-  fontFallback: "serif",
+  fontFamily: "Nunito Sans",
+  fontFallback: "sans-serif",
   size: {
     paragraph: "1.2rem"
   }
