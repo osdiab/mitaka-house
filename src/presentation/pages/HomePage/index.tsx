@@ -34,11 +34,6 @@ const pageEntries: INavBarProps["entries"] = [
     kind: NavEntryKind.LINK
   },
   {
-    displayText: "The Amenities",
-    to: "#amenities-description",
-    kind: NavEntryKind.LINK
-  },
-  {
     displayText: "Rent Today",
     to: "#contact",
     kind: NavEntryKind.BUTTON
