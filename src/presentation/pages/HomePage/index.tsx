@@ -121,7 +121,8 @@ export class HomePage extends React.Component<{}> {
         <BannerSection>
           <BannerHeader>Welcome to your new home in Tokyo.</BannerHeader>
           <BannerSubheader>
-            Peace, authenticity, just minutes from the hottest neighborhoods.
+            Peaceful, authentic life. Just minutes from the hottest
+            neighborhoods.
           </BannerSubheader>
           <PriceHighlight>45,000円 month-to-month</PriceHighlight>
         </BannerSection>
@@ -221,7 +222,7 @@ export class HomePage extends React.Component<{}> {
             You can also experience{" "}
             <Link to="http://www.yumorinosato.com/">
               a beautiful, natural onsen (hot spring) at historic Jindaiji
-              Temple (神代寺)
+              Temple (深大寺)
             </Link>
             , 15 minutes from Mitaka House by bus.
           </Paragraph>
@@ -254,7 +255,7 @@ export class HomePage extends React.Component<{}> {
             cafe near Mitaka Station.
           </Paragraph>
 
-          <SectionSubtitle>Foreign- and short-term friendly</SectionSubtitle>
+          <SectionSubtitle>Foreign-friendly</SectionSubtitle>
           <Paragraph>
             The landlord is able to speak some English, but if you need any
             help, we've got you're back.
@@ -271,18 +272,18 @@ export class HomePage extends React.Component<{}> {
             western apartment, including a refrigerator for your leftovers, and
             air conditioning for hot summer days.
           </Paragraph>
+
+          <SectionSubtitle>
+            Affordable, short-term rent, starting at 45,000円/mo
+          </SectionSubtitle>
+          <Paragraph>
+            You know how expensive Tokyo can be, so this should speak for
+            itself!
+          </Paragraph>
           <Paragraph>
             We are also happy to accept{" "}
             <Emphasis>month-to-month rentals</Emphasis>, since we understand how
             hard it is to find such arrangements in Japan.
-          </Paragraph>
-
-          <SectionSubtitle>
-            Affordable rent, starting at 45,000円/mo
-          </SectionSubtitle>
-          <Paragraph>
-            You know how expensive Tokyo can be, so there's not much more to say
-            about this!
           </Paragraph>
         </PageBody>
       </>
