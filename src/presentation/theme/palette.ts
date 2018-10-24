@@ -10,8 +10,8 @@ export const palette = {
 export function highlightColor(origColor: string): string {
   const colorObj = color(origColor);
   return colorObj
-    .lighten(0.3)
-    .saturate(0.3)
+    .lighten(0.2)
+    .saturate(0.1)
     .string();
   // return (colorObj.isLight()
   //   ? colorObj.darken(0.2)
