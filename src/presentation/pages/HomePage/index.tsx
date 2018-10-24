@@ -41,7 +41,7 @@ const pageEntries: INavBarProps["entries"] = [
 ];
 
 const PageSectionTitle = styled(H2)`
-  color: ${props => props.theme.palette.interactive};
+  color: ${props => props.theme.palette.secondary};
 `;
 const SectionSubtitle = styled(H3)`
   color: ${props => props.theme.palette.primary};
@@ -104,7 +104,7 @@ const BannerSubheader = styled(H3)`
 `;
 
 const PriceHighlight = styled(H3)`
-  color: ${props => props.theme.palette.interactive};
+  color: ${props => props.theme.palette.secondary};
   font-weight: 700;
 `;
 
