@@ -71,7 +71,7 @@ const BannerSection = styled.section`
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(256, 256, 256, 0.6);
+    background-color: rgba(256, 256, 256, 0.7);
     z-index: 0;
   }
 
