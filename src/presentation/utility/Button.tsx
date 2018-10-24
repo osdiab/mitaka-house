@@ -6,7 +6,7 @@ import styled, {
 } from "src/presentation/theme/styled-components";
 import { Link, LinkAppearance } from "src/presentation/utility/Link";
 import { logger } from "src/utility/logger";
-import { OptionalMembers } from "src/utility/types";
+import { Omit, OptionalMembers } from "src/utility/types";
 import { highlightColor } from "../theme/palette";
 
 export enum ButtonTargetKind {
@@ -42,31 +42,36 @@ export interface IButtonProps {
   size?: ButtonSize;
   disabled?: boolean;
   role?: ButtonRole;
+  color?: string;
 }
 
-type ButtonColorParameters = Pick<
-  Required<IButtonProps>,
-  "disabled" | "role"
-> & {
-  palette: { primary: string; disabled: string };
-};
+type ButtonColorParameters = Pick<Required<IButtonProps>, "disabled" | "role"> &
+  Pick<IButtonProps, "color"> & {
+    palette: { primary: string; disabled: string };
+  };
 function backgroundColor({
   disabled,
   role,
-  palette
+  palette,
+  color
 }: ButtonColorParameters): string {
   if (role !== ButtonRole.PRIMARY) {
     return "transparent";
   }
-  return disabled ? palette.disabled : palette.primary;
+  return disabled ? palette.disabled : color ? color : palette.primary;
 }
 
-function fontColor({ disabled, role, palette }: ButtonColorParameters): string {
+function fontColor({
+  disabled,
+  role,
+  palette,
+  color
+}: ButtonColorParameters): string {
   if (role !== ButtonRole.PRIMARY) {
     if (disabled) {
       return palette.disabled;
     }
-    return palette.primary;
+    return color ? color : palette.primary;
   }
   return disabled ? "black" : "white";
 }
@@ -78,7 +83,9 @@ function hoverFontColor(params: ButtonColorParameters): string {
     case ButtonRole.SECONDARY:
       return fontColor({ ...params, role: ButtonRole.PRIMARY });
     case ButtonRole.TEXT_ONLY: {
-      return highlightColor(params.palette.primary).toString();
+      return highlightColor(
+        params.color ? params.color : params.palette.primary
+      ).toString();
     }
   }
 }
@@ -86,43 +93,50 @@ function hoverFontColor(params: ButtonColorParameters): string {
 function hoverBackgroundColor({
   disabled,
   role,
-  palette
+  palette,
+  color
 }: ButtonColorParameters): string {
   if (role === ButtonRole.TEXT_ONLY) {
     return "transparent";
   }
 
-  return disabled ? palette.disabled : highlightColor(palette.primary);
+  return disabled
+    ? palette.disabled
+    : highlightColor(color ? color : palette.primary);
 }
 
 function borderColor({
   disabled,
   role,
-  palette
+  palette,
+  color
 }: ButtonColorParameters): string {
   if (role === ButtonRole.TEXT_ONLY) {
     return "transparent";
   }
-  return disabled ? palette.disabled : palette.primary;
+  return disabled ? palette.disabled : color ? color : palette.primary;
 }
 
 function hoverBorderColor({
   disabled,
   role,
-  palette
+  palette,
+  color
 }: ButtonColorParameters): string {
   if (role === ButtonRole.TEXT_ONLY) {
     return "transparent";
   }
 
-  return disabled ? palette.disabled : highlightColor(palette.primary);
+  return disabled
+    ? palette.disabled
+    : highlightColor(color ? color : palette.primary);
 }
 
 function getColorParams(
   props: ThemedStyledProps<StyledButtonProps>
 ): ButtonColorParameters {
   return {
-    ...R.pick(["role", "disabled"], props),
+    ...R.pick(["role", "disabled", "color"], props),
     palette: { ...R.pick(["primary", "disabled"], props.theme.palette) }
   };
 }
@@ -192,54 +206,42 @@ function buttonFontSize(size: IButtonProps["size"]) {
   }
 }
 
-const defaultProps: OptionalMembers<IButtonProps> = {
+const defaultProps: OptionalMembers<Omit<IButtonProps, "color">> = {
   size: ButtonSize.MEDIUM,
   disabled: false,
   role: ButtonRole.PRIMARY
 };
 
-export const Button: React.StatelessComponent<IButtonProps> = props => {
-  const { onClick, size, disabled, role, children } = {
+export const Button: React.StatelessComponent<IButtonProps> = origProps => {
+  const props = {
     ...defaultProps,
-    ...(R.reject(R.isNil, props) as typeof props)
-  } as Required<IButtonProps> & Pick<typeof props, "children">;
+    ...(R.reject(R.isNil, origProps) as typeof origProps)
+  } as Required<IButtonProps> & Pick<typeof origProps, "children">;
 
-  switch (onClick.kind) {
+  switch (props.onClick.kind) {
     case ButtonTargetKind.LINK: {
-      const linkContent = (
-        <StyledDivButton disabled={disabled} size={size} role={role}>
-          {children}
-        </StyledDivButton>
-      );
-      if (disabled) {
+      const linkContent = <StyledDivButton {...R.omit(["onClick"], props)} />;
+      if (props.disabled) {
         return linkContent;
       }
 
       return (
-        <Link appearance={LinkAppearance.UNSTYLED} to={onClick.action}>
+        <Link appearance={LinkAppearance.UNSTYLED} to={props.onClick.action}>
           {linkContent}
         </Link>
       );
     }
     case ButtonTargetKind.SUBMIT:
-      return (
-        <StyledButton disabled={disabled} size={size} role={role} type="submit">
-          {children}
-        </StyledButton>
-      );
+      return <StyledButton type="submit" {...R.omit(["onClick"], props)} />;
     case ButtonTargetKind.FUNCTION:
       return (
         <StyledButton
-          disabled={disabled}
-          size={size}
-          role={role}
-          onClick={onClick.action}
-        >
-          {children}
-        </StyledButton>
+          onClick={props.onClick.action}
+          {...R.omit(["onClick"], props)}
+        />
       );
     default:
-      logInvalidTargetKind(onClick);
+      logInvalidTargetKind(props.onClick);
       return <React.Fragment />;
   }
 };
