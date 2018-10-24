@@ -54,7 +54,7 @@ export const NavBar: React.StatelessComponent<INavBarProps> = ({ entries }) => {
               <Link to={to}>{displayText}</Link>
             ) : (
               <Button
-                color={palette.secondary}
+                color={palette.interactive}
                 onClick={{ kind: ButtonTargetKind.LINK, action: to }}
               >
                 {displayText}

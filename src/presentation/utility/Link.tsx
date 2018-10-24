@@ -26,12 +26,12 @@ export interface ILinkProps {
 }
 
 const HyperlinkA = styled.a`
-  color: ${props => props.theme.palette.secondary};
+  color: ${props => props.theme.palette.interactive};
   font-weight: 700;
   transition: color 0.1s ease-in;
 
   :hover {
-    color: ${props => highlightColor(props.theme.palette.secondary)}
+    color: ${props => highlightColor(props.theme.palette.interactive)}
 `;
 const UnstyledA = styled.a`
   text-decoration: none;

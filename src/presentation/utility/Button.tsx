@@ -47,7 +47,7 @@ export interface IButtonProps {
 
 type ButtonColorParameters = Pick<Required<IButtonProps>, "disabled" | "role"> &
   Pick<IButtonProps, "color"> & {
-    palette: { secondary: string; disabled: string };
+    palette: { interactive: string; disabled: string };
   };
 function backgroundColor({
   disabled,
@@ -58,7 +58,7 @@ function backgroundColor({
   if (role !== ButtonRole.PRIMARY) {
     return "transparent";
   }
-  return disabled ? palette.disabled : color ? color : palette.secondary;
+  return disabled ? palette.disabled : color ? color : palette.interactive;
 }
 
 function fontColor({
@@ -71,7 +71,7 @@ function fontColor({
     if (disabled) {
       return palette.disabled;
     }
-    return color ? color : palette.secondary;
+    return color ? color : palette.interactive;
   }
   return disabled ? "black" : "white";
 }
@@ -84,7 +84,7 @@ function hoverFontColor(params: ButtonColorParameters): string {
       return fontColor({ ...params, role: ButtonRole.PRIMARY });
     case ButtonRole.TEXT_ONLY: {
       return highlightColor(
-        params.color ? params.color : params.palette.secondary
+        params.color ? params.color : params.palette.interactive
       ).toString();
     }
   }
@@ -102,7 +102,7 @@ function hoverBackgroundColor({
 
   return disabled
     ? palette.disabled
-    : highlightColor(color ? color : palette.secondary);
+    : highlightColor(color ? color : palette.interactive);
 }
 
 function borderColor({
@@ -114,7 +114,7 @@ function borderColor({
   if (role === ButtonRole.TEXT_ONLY) {
     return "transparent";
   }
-  return disabled ? palette.disabled : color ? color : palette.secondary;
+  return disabled ? palette.disabled : color ? color : palette.interactive;
 }
 
 function hoverBorderColor({
@@ -129,7 +129,7 @@ function hoverBorderColor({
 
   return disabled
     ? palette.disabled
-    : highlightColor(color ? color : palette.secondary);
+    : highlightColor(color ? color : palette.interactive);
 }
 
 function getColorParams(
@@ -137,7 +137,7 @@ function getColorParams(
 ): ButtonColorParameters {
   return {
     ...R.pick(["role", "disabled", "color"], props),
-    palette: { ...R.pick(["secondary", "disabled"], props.theme.palette) }
+    palette: { ...R.pick(["interactive", "disabled"], props.theme.palette) }
   };
 }
 
