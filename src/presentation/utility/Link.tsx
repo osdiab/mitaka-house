@@ -8,9 +8,9 @@ import {
 } from "react-router-hash-link";
 import * as smoothscroll from "smoothscroll-polyfill";
 
+import { highlightColor } from "src/presentation/theme/palette";
 import styled from "src/presentation/theme/styled-components";
 import { logger } from "src/utility/logger";
-import { highlightColor } from "../theme/palette";
 
 smoothscroll.polyfill();
 
