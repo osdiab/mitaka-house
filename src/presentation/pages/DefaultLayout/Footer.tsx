@@ -67,7 +67,7 @@ export const Footer: React.StatelessComponent<{}> = () => (
           action: mailtoLink
         }}
       >
-        Send us an email today
+        Send Us An Email
       </Button>
     </ContactSection>
     <InfoSection>
