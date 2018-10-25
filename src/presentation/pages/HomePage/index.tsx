@@ -220,7 +220,7 @@ export class HomePage extends React.Component<{}> {
             You can also experience{" "}
             <Link to="http://www.yumorinosato.com/">
               a beautiful, natural onsen (hot spring) at historic Jindaiji
-              Temple (深大)
+              Temple (深大寺)
             </Link>
             , 15 minutes from Mitaka House by bus.
           </Paragraph>
