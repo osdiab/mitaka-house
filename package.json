@@ -6,7 +6,7 @@
     "start": "NODE_PATH=. react-scripts start",
     "build": "NODE_PATH=. react-scripts build",
     "postbuild": "react-snap",
-    "test": "NODE_PATH=. react-scripts test --env=jsdom",
+    "test": "NODE_PATH=. react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "./scripts/check-branch && yarn build && gh-pages --dist build --branch master"
   },
