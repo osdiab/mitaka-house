@@ -145,11 +145,9 @@ export class HomePage extends React.Component<{}> {
             The Neighborhood
           </PageSectionTitle>
 
-          <SectionSubtitle>
-            Mitaka House is near many of Tokyo's hottest neighborhoods.
-          </SectionSubtitle>
+          <H3>Mitaka House is near many of Tokyo's hottest neighborhoods.</H3>
 
-          <H3>吉祥寺 Kichijōji</H3>
+          <SectionSubtitle>吉祥寺 Kichijōji</SectionSubtitle>
           <PlaceInfo>
             20 minutes from Mitaka House by bus (every 5-7 minutes), or 45
             minutes by foot.
@@ -169,7 +167,7 @@ export class HomePage extends React.Component<{}> {
             (we'll help you get the ¥1,000 tickets how locals do it!).
           </Paragraph>
 
-          <H3>下北沢 Shimokitazawa</H3>
+          <SectionSubtitle>下北沢 Shimokitazawa</SectionSubtitle>
           <PlaceInfo>
             10 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
@@ -185,7 +183,7 @@ export class HomePage extends React.Component<{}> {
             <Link to="http://cafestayhappy.com/">Café Stay Happy</Link>.
           </Paragraph>
 
-          <H3>渋谷 Shibuya</H3>
+          <SectionSubtitle>渋谷 Shibuya</SectionSubtitle>
           <PlaceInfo>
             15 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
@@ -199,7 +197,7 @@ export class HomePage extends React.Component<{}> {
             morning!).
           </Paragraph>
 
-          <H3>新宿 Shinjuku</H3>
+          <SectionSubtitle>新宿 Shinjuku</SectionSubtitle>
           <PlaceInfo>
             20 minutes from Kichijōji by JR Chūō Line (JR中央線).
           </PlaceInfo>
@@ -211,7 +209,7 @@ export class HomePage extends React.Component<{}> {
             to Kyoto tomorrow!
           </Paragraph>
 
-          <H3>三鷹 Mitaka</H3>
+          <SectionSubtitle>三鷹 Mitaka</SectionSubtitle>
           <PlaceInfo>Home, sweet home.</PlaceInfo>
           <Paragraph>
             Mitaka House is in Shinkawa (新川), a quiet neighborhood with small,
