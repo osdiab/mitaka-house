@@ -52,7 +52,7 @@ const BannerSection = styled.section`
 
   position: relative;
   margin-bottom: 1.4rem;
-  background-image: url("/assets/images/neighborhoods/inokashira.jpg");
+  background-image: url("/assets/images/neighborhoods/kichijoji/inokashira-boats.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
