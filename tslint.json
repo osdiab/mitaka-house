@@ -3,8 +3,10 @@
   "rules": {
     // Reason: no auto-fixer, so this gets annoying. Also, sometimes
     // alphabetical ordering is non-intuitive.
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "no-relative-imports": true
   },
+  "rulesDirectory": "tslint-microsoft-contrib",
   "linterOptions": {
     "exclude": [
       "config/**/*.js",
