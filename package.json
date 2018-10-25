@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "start": "NODE_PATH=. react-scripts start",
+    "build": "react-scripts build",
     "postbuild": "react-snap",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
     "deploy": "./scripts/check-branch && yarn build && gh-pages --dist build --branch master"
   },
   "dependencies": {
@@ -19,15 +19,16 @@
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
     "react-router-hash-link": "^1.2.0",
-    "react-scripts-ts": "^4.0.8",
+    "react-scripts": "^2.0.6-next.c662dfb0",
     "smoothscroll-polyfill": "^0.4.3",
     "styled-components": "^4.0.2",
+    "typescript": "^3.1.3",
     "winston": "^3.1.0"
   },
   "devDependencies": {
     "@types/color": "^3.0.0",
     "@types/is-relative-url": "^2.0.0",
-    "@types/jest": "^23.3.5",
+    "@types/jest": "^23.3.7",
     "@types/node": "^10.12.0",
     "@types/ramda": "^0.25.39",
     "@types/react": "^16.4.18",
@@ -38,8 +39,7 @@
     "@types/smoothscroll-polyfill": "^0.3.0",
     "@types/styled-components": "^4.0.1",
     "gh-pages": "^2.0.1",
-    "react-snap": "^1.19.0",
-    "typescript": "^3.1.3"
+    "react-snap": "^1.19.0"
   },
   "browserslist": [
     ">0.2%",
