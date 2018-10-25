@@ -1,9 +1,9 @@
 import * as React from "react";
 
 import styled from "src/presentation/theme/styled-components";
+import { Button, ButtonTargetKind } from "src/presentation/utility/Button";
 import { Link } from "src/presentation/utility/Link";
-import { Button, ButtonTargetKind } from "../Button";
-import { PageSection } from "../mixins/PageSection";
+import { PageSection } from "src/presentation/utility/mixins/PageSection";
 
 export enum NavEntryKind {
   BUTTON = "BUTTON",

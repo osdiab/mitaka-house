@@ -4,7 +4,8 @@ import {
 } from "loadable-components";
 import * as React from "react";
 import { hydrate, render } from "react-dom";
-import { App } from "./App";
+
+import { App } from "src/App";
 // import registerServiceWorker from "./registerServiceWorker";
 
 async function startApp() {

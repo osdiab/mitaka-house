@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "./styled-components";
+import { createGlobalStyle } from "src/presentation/theme/styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
