@@ -1,10 +1,10 @@
 import color from "color";
 import * as React from "react";
 
+import { Footer } from "src/presentation/pages/DefaultLayout/Footer";
+import { Header } from "src/presentation/pages/DefaultLayout/Header";
 import { GlobalStyle } from "src/presentation/theme/GlobalStyle";
 import styled from "src/presentation/theme/styled-components";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
 
 const PageContainer = styled.div`
   min-height: 100vh;

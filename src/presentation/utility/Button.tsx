@@ -1,13 +1,13 @@
 import * as R from "ramda";
 import * as React from "react";
 
+import { highlightColor } from "src/presentation/theme/palette";
 import styled, {
   ThemedStyledProps
 } from "src/presentation/theme/styled-components";
 import { Link, LinkAppearance } from "src/presentation/utility/Link";
 import { logger } from "src/utility/logger";
 import { Omit, OptionalMembers } from "src/utility/types";
-import { highlightColor } from "../theme/palette";
 
 export enum ButtonTargetKind {
   LINK = "LINK",
