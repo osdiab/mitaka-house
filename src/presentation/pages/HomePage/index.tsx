@@ -1,3 +1,4 @@
+import NukaCarousel from "nuka-carousel";
 import * as React from "react";
 
 import styled from "src/presentation/theme/styled-components";
@@ -21,6 +22,20 @@ import {
 } from "src/presentation/utility/mixins/PageSection";
 import { Emphasis as EmphasisMixin } from "src/presentation/utility/mixins/text/Emphasis";
 import { Paragraph } from "src/presentation/utility/Paragraph";
+
+import kichijojiHarmonica from "public/assets/images/neighborhoods/kichijoji/harmonica-yokocho.jpg";
+import kichijojiBoats from "public/assets/images/neighborhoods/kichijoji/inokashira-boats.jpg";
+import kichijojiSwan from "public/assets/images/neighborhoods/kichijoji/inokashira-swan.jpg";
+import kichijojiNakamichi from "public/assets/images/neighborhoods/kichijoji/nakamichi.jpg";
+import kichijojiArcade from "public/assets/images/neighborhoods/kichijoji/shopping-arcade.jpg";
+
+import mitakaFarm from "public/assets/images/neighborhoods/mitaka/farm.jpg";
+import mitakaMaruike from "public/assets/images/neighborhoods/mitaka/maruike-koen.jpg";
+import mitakaPersimmons from "public/assets/images/neighborhoods/mitaka/persimmons.jpg";
+import mitakaVeggieVending from "public/assets/images/neighborhoods/mitaka/veggie-vending.jpg";
+import mitakaYumoriNoSato from "public/assets/images/neighborhoods/mitaka/yumori-no-sato.jpg";
+
+import shimokitazawaMusicBar from "public/assets/images/neighborhoods/shimokitazawa/music-bar-rpm.jpg";
 
 const pageEntries: INavBarProps["entries"] = [
   {
@@ -52,7 +67,7 @@ const BannerSection = styled.section`
 
   position: relative;
   margin-bottom: 1.4rem;
-  background-image: url("/assets/images/neighborhoods/kichijoji/inokashira-boats.jpg");
+  background-image: url(${kichijojiBoats});
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -113,6 +128,13 @@ const PlaceInfo = styled(Paragraph)`
   color: #666666;
 `;
 
+const Carousel = styled(NukaCarousel)`
+  max-width: 550px;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+`;
+
+const renderBottomCenterControls = () => <></>;
 export class HomePage extends React.Component<{}> {
   public render() {
     return (
@@ -148,6 +170,17 @@ export class HomePage extends React.Component<{}> {
           <H3>Mitaka House is near many of Tokyo's hottest neighborhoods.</H3>
 
           <SectionSubtitle>吉祥寺 Kichijōji</SectionSubtitle>
+          <Carousel
+            heightMode="max"
+            autoplay={true}
+            wrapAround={true}
+            renderBottomCenterControls={renderBottomCenterControls}
+          >
+            <img src={kichijojiSwan} />
+            <img src={kichijojiHarmonica} />
+            <img src={kichijojiNakamichi} />
+            <img src={kichijojiArcade} />
+          </Carousel>
           <PlaceInfo>
             20 minutes from Mitaka House by bus (every 5-7 minutes), or 45
             minutes by foot.
@@ -168,6 +201,16 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
 
           <SectionSubtitle>下北沢 Shimokitazawa</SectionSubtitle>
+
+          <Carousel
+            heightMode="max"
+            // autoplay={true}
+            // wrapAround={true}
+            // renderBottomCenterControls={renderBottomCenterControls}
+            withoutControls={true}
+          >
+            <img src={shimokitazawaMusicBar} />
+          </Carousel>
           <PlaceInfo>
             10 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
@@ -210,6 +253,18 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
 
           <SectionSubtitle>三鷹 Mitaka</SectionSubtitle>
+          <Carousel
+            heightMode="max"
+            autoplay={true}
+            wrapAround={true}
+            renderBottomCenterControls={renderBottomCenterControls}
+          >
+            <img src={mitakaMaruike} />
+            <img src={mitakaFarm} />
+            <img src={mitakaVeggieVending} />
+            <img src={mitakaPersimmons} />
+            <img src={mitakaYumoriNoSato} />
+          </Carousel>
           <PlaceInfo>Home, sweet home.</PlaceInfo>
           <Paragraph>
             Mitaka House is in Shinkawa (新川), a quiet neighborhood with small,
