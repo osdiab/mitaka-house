@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "src/presentation/theme/styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
   * {
     margin: 0;
     padding: 0;

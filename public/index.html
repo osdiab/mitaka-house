@@ -65,6 +65,32 @@
     }(window.location))
   </script>
   <!-- End Single Page Apps for GitHub Pages -->
+
+  <!-- Webfonts, without a Flash of Invisible Content (FOIC) -->
+  <!-- https://github.com/google/fonts/issues/358#issuecomment-379374216 -->
+  <script>
+    function loadFont(url) {
+      // the 'fetch' equivalent has caching issues
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', url, true);
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          let css = xhr.responseText;
+          css = css.replace(/}/g, 'font-display: swap; }');
+
+          const head = document.getElementsByTagName('head')[0];
+          const style = document.createElement('style');
+          style.appendChild(document.createTextNode(css));
+          head.appendChild(style);
+        }
+      }
+      xhr.send();
+    }
+
+    loadFont('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+  </script>
+
+  <!-- END Webfonts -->
 </head>
 
 <body>
