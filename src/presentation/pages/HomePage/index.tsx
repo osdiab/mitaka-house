@@ -141,7 +141,8 @@ const PlaceInfo = styled(Paragraph)`
 
 const PlaceStyles = css`
   display: block;
-  max-width: 550px;
+  width: 550px;
+  max-width: 100%;
   margin: 0 auto;
   margin-bottom: 1.2rem;
 `;
