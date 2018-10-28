@@ -26,6 +26,16 @@ const ContactSection = styled.section`
   ${PageSection};
   padding-bottom: 2rem;
   align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: ${props => props.theme.mediaQueries.sizes.small}) {
+    align-items: flex-start;
+    text-align: left;
+  }
 `;
 const ContactSectionTitle = styled(H2)`
   color: ${props => props.theme.palette.secondary};
