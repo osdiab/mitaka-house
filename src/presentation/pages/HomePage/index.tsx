@@ -311,7 +311,7 @@ export class HomePage extends React.Component<{}> {
           <SectionSubtitle>Foreign-friendly</SectionSubtitle>
           <Paragraph>
             The landlord is able to speak some English, but if you need any
-            help, we've got you're back.
+            help, we've got your back.
           </Paragraph>
           <Paragraph>
             We'll <Emphasis>explain to you in English</Emphasis> how to pay your
@@ -320,10 +320,9 @@ export class HomePage extends React.Component<{}> {
             Japan.
           </Paragraph>
           <Paragraph>
-            We will also{" "}
-            <Emphasis>provide the basic appliances you'd expect</Emphasis> in a
-            western apartment, including a refrigerator for your leftovers, and
-            air conditioning for hot summer days.
+            We will also <Emphasis>provide large appliances</Emphasis> you'd
+            expect in a western apartment, including a refrigerator for your
+            leftovers, and air conditioning for hot summer days.
           </Paragraph>
 
           <SectionSubtitle>
