@@ -35,6 +35,8 @@ import mitakaPersimmons from "public/assets/images/neighborhoods/mitaka/persimmo
 import mitakaVeggieVending from "public/assets/images/neighborhoods/mitaka/veggie-vending.jpg";
 import mitakaYumoriNoSato from "public/assets/images/neighborhoods/mitaka/yumori-no-sato.jpg";
 
+import shimokitazawaCityCountryCity from "public/assets/images/neighborhoods/shimokitazawa/citycountrycity.jpg";
+import shimokitazawaIntersection from "public/assets/images/neighborhoods/shimokitazawa/intersection.jpg";
 import shimokitazawaMusicBar from "public/assets/images/neighborhoods/shimokitazawa/music-bar-rpm.jpg";
 
 import shibuyaCrossing from "public/assets/images/neighborhoods/shibuya/crossing.jpg";
@@ -225,13 +227,15 @@ export class HomePage extends React.Component<{}> {
             // renderBottomCenterControls={renderBottomCenterControls}
             withoutControls={true}
           >
+            <img src={shimokitazawaIntersection} />
             <img src={shimokitazawaMusicBar} />
+            <img src={shimokitazawaCityCountryCity} />
           </Carousel>
           <PlaceInfo>
             10 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
           <Paragraph>
-            Explore every nook and cranny of Shimokitazawa, a neighborhood
+            Explore the nook and crannies of Shimokitazawa, a neighborhood
             dedicated to everything artistic and quirky. Shop at cheap or
             high-end vintage clothes shops, venture underground to listen to
             Jazz in a tiny bar with a huge sound at{" "}
