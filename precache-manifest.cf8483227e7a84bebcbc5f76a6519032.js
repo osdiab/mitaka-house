@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/shopping-arcade.d7f898a4.jpg"
   },
   {
-    "revision": "34681418edc4b0acbd81",
-    "url": "/static/js/main.34681418.chunk.js"
+    "revision": "15c5552865b262f3398e",
+    "url": "/static/js/main.15c55528.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/static/js/1.723997dc.chunk.js"
   },
   {
-    "revision": "73c9e14d3166ccd0d461148efa575145",
+    "revision": "c0d835e63fab066440793690b72ab265",
     "url": "/index.html"
   }
 ];
