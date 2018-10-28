@@ -1,7 +1,7 @@
 import NukaCarousel from "nuka-carousel";
 import * as React from "react";
 
-import styled from "src/presentation/theme/styled-components";
+import styled, { css } from "src/presentation/theme/styled-components";
 import {
   Button,
   ButtonSize,
@@ -36,6 +36,15 @@ import mitakaVeggieVending from "public/assets/images/neighborhoods/mitaka/veggi
 import mitakaYumoriNoSato from "public/assets/images/neighborhoods/mitaka/yumori-no-sato.jpg";
 
 import shimokitazawaMusicBar from "public/assets/images/neighborhoods/shimokitazawa/music-bar-rpm.jpg";
+
+import shibuyaCrossing from "public/assets/images/neighborhoods/shibuya/crossing.jpg";
+
+import shinjukuGate from "public/assets/images/neighborhoods/shinjuku/gate.jpg";
+
+import roomBathroom from "public/assets/images/room/bathroom.jpg";
+import roomBedroom from "public/assets/images/room/bedroom.jpg";
+import roomCabinet from "public/assets/images/room/cabinet.jpg";
+import roomKitchen from "public/assets/images/room/kitchen.jpg";
 
 const pageEntries: INavBarProps["entries"] = [
   {
@@ -128,10 +137,16 @@ const PlaceInfo = styled(Paragraph)`
   color: #666666;
 `;
 
-const Carousel = styled(NukaCarousel)`
+const PlaceStyles = css`
   max-width: 550px;
   margin: 0 auto;
   margin-bottom: 1.2rem;
+`;
+const Carousel = styled(NukaCarousel)`
+  ${PlaceStyles};
+`;
+const PlaceImg = styled.img`
+  ${PlaceStyles};
 `;
 
 const renderBottomCenterControls = () => <></>;
@@ -227,6 +242,7 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
 
           <SectionSubtitle>渋谷 Shibuya</SectionSubtitle>
+          <PlaceImg src={shibuyaCrossing} />
           <PlaceInfo>
             15 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
@@ -241,6 +257,7 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
 
           <SectionSubtitle>新宿 Shinjuku</SectionSubtitle>
+          <PlaceImg src={shinjukuGate} />
           <PlaceInfo>
             20 minutes from Kichijōji by JR Chūō Line (JR中央線).
           </PlaceInfo>
@@ -288,6 +305,18 @@ export class HomePage extends React.Component<{}> {
 
           <PageSectionTitle id="room-description">The Rooms</PageSectionTitle>
           <SectionSubtitle>Simple Living</SectionSubtitle>
+          <Carousel
+            heightMode="max"
+            autoplay={true}
+            wrapAround={true}
+            renderBottomCenterControls={renderBottomCenterControls}
+          >
+            <img src={roomCabinet} />
+            <img src={roomBedroom} />
+            <img src={roomKitchen} />
+            <img src={roomBathroom} />
+          </Carousel>
+
           <Paragraph>
             Experience authentic Japanese life, sleeping on a comfortable futon
             bed (布団) on tatami mats, cooking food in the modestly sized
