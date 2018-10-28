@@ -222,10 +222,9 @@ export class HomePage extends React.Component<{}> {
 
           <Carousel
             heightMode="max"
-            // autoplay={true}
-            // wrapAround={true}
-            // renderBottomCenterControls={renderBottomCenterControls}
-            withoutControls={true}
+            autoplay={true}
+            wrapAround={true}
+            renderBottomCenterControls={renderBottomCenterControls}
           >
             <img src={shimokitazawaIntersection} />
             <img src={shimokitazawaMusicBar} />
