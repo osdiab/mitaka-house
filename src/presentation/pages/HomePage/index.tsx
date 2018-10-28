@@ -138,6 +138,7 @@ const PlaceInfo = styled(Paragraph)`
 `;
 
 const PlaceStyles = css`
+  display: block;
   max-width: 550px;
   margin: 0 auto;
   margin-bottom: 1.2rem;
