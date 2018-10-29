@@ -367,7 +367,7 @@ export class HomePage extends React.Component<{}> {
             itself!
           </Paragraph>
           <Paragraph>
-            Worried about all the extra fees that Tokyo landlords pile on you?
+            Worried about all the extra fees that Tokyo landlords pile on you?{" "}
             <Emphasis>We don't charge any fees besides rent</Emphasis>. 45,000円
             per month, plus utility bills. That's all!
           </Paragraph>
