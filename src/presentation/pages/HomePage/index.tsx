@@ -195,10 +195,22 @@ export class HomePage extends React.Component<{}> {
             wrapAround={true}
             renderBottomCenterControls={renderBottomCenterControls}
           >
-            <img src={kichijojiSwan} />
-            <img src={kichijojiHarmonica} />
-            <img src={kichijojiNakamichi} />
-            <img src={kichijojiArcade} />
+            <img
+              src={kichijojiSwan}
+              alt="A swan boat in Inokashira park in the cherry blossom season"
+            />
+            <img
+              src={kichijojiHarmonica}
+              alt="Harmonica Yokocho, a tiny Kichijoji street full of delicious food at izakaya and yakitori restaurants"
+            />
+            <img
+              src={kichijojiNakamichi}
+              alt="Nakamichi, a fashionable Kichijoji street with nice cafes, clothing stores, artisinal crafts and a cat cafe."
+            />
+            <img
+              src={kichijojiArcade}
+              alt="The shopping arcade of Kichijoji, a bustling outdoor mall packed with great food and shopping."
+            />
           </Carousel>
           <PlaceInfo>
             20 minutes from Mitaka House by bus (every 5-7 minutes), or 45
@@ -227,9 +239,18 @@ export class HomePage extends React.Component<{}> {
             wrapAround={true}
             renderBottomCenterControls={renderBottomCenterControls}
           >
-            <img src={shimokitazawaIntersection} />
-            <img src={shimokitazawaMusicBar} />
-            <img src={shimokitazawaCityCountryCity} />
+            <img
+              src={shimokitazawaIntersection}
+              alt="Shimokitazawa, a Bohemian neighborhood packed with hipsters, cafes, bars, music, and thrift shops."
+            />
+            <img
+              src={shimokitazawaMusicBar}
+              alt="Music Bar RPM, a small bar and music club in Shimokitazawa, with great live music including jazz."
+            />
+            <img
+              src={shimokitazawaCityCountryCity}
+              alt="City Country City, a combination cafe and record store packed with vinyl and relaxing vibes."
+            />
           </Carousel>
           <PlaceInfo>
             10 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
@@ -247,7 +268,10 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
 
           <SectionSubtitle>渋谷 Shibuya</SectionSubtitle>
-          <PlaceImg src={shibuyaCrossing} />
+          <PlaceImg
+            src={shibuyaCrossing}
+            alt="Shibuya Crossing, the busiest intersection in the world, in the rain with iconic transparent Japanese umbrellas."
+          />
           <PlaceInfo>
             15 minutes from Kichijōji by Keio Inokashira Line (京王井の頭線).
           </PlaceInfo>
@@ -262,7 +286,10 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
 
           <SectionSubtitle>新宿 Shinjuku</SectionSubtitle>
-          <PlaceImg src={shinjukuGate} />
+          <PlaceImg
+            src={shinjukuGate}
+            alt="The main gate of Kabukicho in Shinjuku, a bustling neighborhood full of nightlife."
+          />
           <PlaceInfo>
             20 minutes from Kichijōji by JR Chūō Line (JR中央線).
           </PlaceInfo>
@@ -281,11 +308,26 @@ export class HomePage extends React.Component<{}> {
             wrapAround={true}
             renderBottomCenterControls={renderBottomCenterControls}
           >
-            <img src={mitakaMaruike} />
-            <img src={mitakaFarm} />
-            <img src={mitakaVeggieVending} />
-            <img src={mitakaPersimmons} />
-            <img src={mitakaYumoriNoSato} />
+            <img
+              src={mitakaMaruike}
+              alt="Maruike Koen, a small, quiet park with bridges over a pond and a river in Mitaka."
+            />
+            <img
+              src={mitakaFarm}
+              alt="A Tokyo urban farm that sells fresh vegetables from a vending machine."
+            />
+            <img
+              src={mitakaVeggieVending}
+              alt="A Tokyo vending machines that sells fresh vegetables from the farm next to it."
+            />
+            <img
+              src={mitakaPersimmons}
+              alt="A handful of persimmons sold from a vending machine from a Tokyo urban farm."
+            />
+            <img
+              src={mitakaYumoriNoSato}
+              alt="The outdoor pool at a natural onsen in Jindaiji Temple near Mitaka House."
+            />
           </Carousel>
           <PlaceInfo>Home, sweet home.</PlaceInfo>
           <Paragraph>
@@ -316,10 +358,22 @@ export class HomePage extends React.Component<{}> {
             wrapAround={true}
             renderBottomCenterControls={renderBottomCenterControls}
           >
-            <img src={roomCabinet} />
-            <img src={roomBedroom} />
-            <img src={roomKitchen} />
-            <img src={roomBathroom} />
+            <img
+              src={roomCabinet}
+              alt="The traditional Japanese bedroom at Mitaka House, with tatami flooring and storage cabinets."
+            />
+            <img
+              src={roomBedroom}
+              alt="The traditional Japanese bedroom at Mitaka House, with a futon to sleep on tatami mats."
+            />
+            <img
+              src={roomKitchen}
+              alt="The cozy kitchen in this 1K apartment, with a stove, microwave, refrigerator, rice cooker, and more."
+            />
+            <img
+              src={roomBathroom}
+              alt="The bathroom in Mitaka House apartments, containing a Japanese-style bath and toilet in the same room."
+            />
           </Carousel>
 
           <Paragraph>
