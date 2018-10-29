@@ -165,7 +165,7 @@ export class HomePage extends React.Component<{}> {
             Peaceful, authentic life. Just minutes from the hottest
             neighborhoods.
           </BannerSubheader>
-          <PriceHighlight>45,000円 month-to-month</PriceHighlight>
+          <PriceHighlight>45,000円 month-to-month, no fees</PriceHighlight>
         </BannerSection>
 
         <RentCallToAction>
@@ -365,6 +365,11 @@ export class HomePage extends React.Component<{}> {
           <Paragraph>
             You know how expensive Tokyo can be, so this should speak for
             itself!
+          </Paragraph>
+          <Paragraph>
+            Worried about all the extra fees that Tokyo landlords pile on you?
+            <Emphasis>We don't charge any fees besides rent</Emphasis>. 45,000円
+            per month, plus utility bills. That's all!
           </Paragraph>
           <Paragraph>
             We are also happy to accept{" "}
