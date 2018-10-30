@@ -1,4 +1,4 @@
-import color from "color";
+import * as color from "color";
 
 const secondary = "#27A721";
 export const palette = {
