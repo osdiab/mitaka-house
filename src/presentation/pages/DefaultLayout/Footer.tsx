@@ -1,4 +1,4 @@
-import color from "color";
+import * as color from "color";
 import * as React from "react";
 
 import styled from "src/presentation/theme/styled-components";
