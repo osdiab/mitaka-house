@@ -228,7 +228,7 @@ export class HomePage extends React.Component<{}> {
             <Link to="http://www.ghibli-museum.jp/en/">
               Studio Ghibli Museum
             </Link>{" "}
-            (we'll help you get the ¥1,000 tickets how locals do it!).
+            (we'll help you get the ¥1,000 tickets the way locals do it!).
           </Paragraph>
 
           <SectionSubtitle>下北沢 Shimokitazawa</SectionSubtitle>
@@ -297,8 +297,7 @@ export class HomePage extends React.Component<{}> {
             Being the busiest train station on the planet, Shinjuku is not just
             an incredibly lively place at all times of day—it's also a great
             gateway to all of Tokyo and Japan. Shop in Shinjuku by day, dine and
-            drink by night, and catch an express train to catch your Shinkansen
-            to Kyoto tomorrow!
+            drink by night, and catch your Shinkansen to Kyoto tomorrow!
           </Paragraph>
 
           <SectionSubtitle>三鷹 Mitaka</SectionSubtitle>
@@ -410,7 +409,7 @@ export class HomePage extends React.Component<{}> {
           <Paragraph>
             We will also <Emphasis>provide large appliances</Emphasis> you'd
             expect in a western apartment, including a refrigerator for your
-            leftovers, and air conditioning for hot summer days.
+            leftovers and air conditioning for hot summer days.
           </Paragraph>
 
           <SectionSubtitle>
