@@ -421,8 +421,9 @@ export class HomePage extends React.Component<{}> {
           </Paragraph>
           <Paragraph>
             Worried about all the extra fees that Tokyo landlords pile on you?{" "}
-            <Emphasis>We don't charge any fees besides rent</Emphasis>. 45,000円
-            per month, plus utility bills. That's all!
+            <Emphasis>We don't charge any fees besides rent</Emphasis>. 70,000円
+            for one month, or 45,000円 per month for longer stays, plus utility
+            bills. That's all!
           </Paragraph>
           <Paragraph>
             We are also happy to accept{" "}
