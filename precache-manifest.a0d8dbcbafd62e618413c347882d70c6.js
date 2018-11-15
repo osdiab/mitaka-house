@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/veggie-vending.10568831.jpg"
   },
   {
-    "revision": "52fa037a42c0a266661d",
-    "url": "/static/js/main.52fa037a.chunk.js"
+    "revision": "799a36ac73f0bcc85590",
+    "url": "/static/js/main.799a36ac.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -88,7 +88,7 @@ self.__precacheManifest = [
     "url": "/static/js/1.28115b5c.chunk.js"
   },
   {
-    "revision": "d266ac46b4f02dd39b88ff54507e826c",
+    "revision": "239a68864437b6123b1a9578e5574f3a",
     "url": "/index.html"
   }
 ];
