@@ -377,8 +377,7 @@ export class HomePage extends React.Component<{}> {
 
           <Paragraph>
             Experience authentic Japanese life, sleeping on a comfortable futon
-            bed (布団) on tatami mats, cooking food in the modestly sized
-            kitchen and enjoying the cozy, quiet atmosphere.
+            bed (布団) on tatami mats and enjoying the cozy, quiet atmosphere.
           </Paragraph>
           <Paragraph>
             Apartments at Mitaka House are 6畳 (jō, the size of a tatami mat),{" "}
