@@ -57,7 +57,7 @@ const mailBody = `Hello,
 Talk to you soon!
 
  `;
-const mailtoLink = `mailto:hi@mitakahome.com?subject=${encodeURI(
+const mailtoLink = `mailto:hi@mitakahouse.com?subject=${encodeURI(
   "I'm interested in renting at Mitaka House!"
 )}&body=${encodeURI(mailBody)}`;
 export const Footer: React.StatelessComponent<{}> = () => (
@@ -68,8 +68,8 @@ export const Footer: React.StatelessComponent<{}> = () => (
         Inquire about your new home in Tokyo <Emphasis>today</Emphasis>
       </H3>
       <Paragraph>
-        Shoot us an email at <Link to={mailtoLink}>hi@mitakahome.com</Link>, and
-        we'll get everything squared off. Welcome to your new home in Tokyo!
+        Shoot us an email at <Link to={mailtoLink}>hi@mitakahouse.com</Link>,
+        and we'll get everything squared off. Welcome to your new home in Tokyo!
       </Paragraph>
       <Button
         onClick={{
