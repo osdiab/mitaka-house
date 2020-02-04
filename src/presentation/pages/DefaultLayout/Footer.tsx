@@ -45,9 +45,9 @@ const Emphasis = styled.span`
   ${EmphasisMixin};
 `;
 const mailBody = `Hello,
-          
+
  I'm interested in renting an apartment at Mitaka House! Here is some information about myself:
- 
+
  - Full Name:
  - Best way to contact you (if not email, then please tell us how, i.e. phone number):
  - Languages spoken:
@@ -57,7 +57,7 @@ const mailBody = `Hello,
 Talk to you soon!
 
  `;
-const mailtoLink = `mailto:hi@mitakahouse.com?subject=${encodeURI(
+const mailtoLink = `mailto:mitakahouse@omardiab.com?subject=${encodeURI(
   "I'm interested in renting at Mitaka House!"
 )}&body=${encodeURI(mailBody)}`;
 export const Footer: React.StatelessComponent<{}> = () => (
@@ -68,7 +68,7 @@ export const Footer: React.StatelessComponent<{}> = () => (
         Inquire about your new home in Tokyo <Emphasis>today</Emphasis>
       </H3>
       <Paragraph>
-        Shoot us an email at <Link to={mailtoLink}>hi@mitakahouse.com</Link>,
+        Shoot us an email at <Link to={mailtoLink}>mitakahouse@omardiab.com</Link>,
         and we'll get everything squared off. Welcome to your new home in Tokyo!
       </Paragraph>
       <Button
