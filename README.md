@@ -1,6 +1,6 @@
 # This codebase is no longer maintained.
 
-You can view the cute website at `https://mitakahouse.omardiab.com`.
+You can view the cute website at https://mitakahouse.omardiab.com.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
